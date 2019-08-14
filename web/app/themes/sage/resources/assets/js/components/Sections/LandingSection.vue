@@ -1,5 +1,10 @@
 <template>
     <section class="landing" id="landing">
+        <div class="landing__video-container">
+            <video autoplay muted loop class="landing__video-container--video">
+                <source :src="video" type="video/mp4">
+            </video>
+        </div>
         <div class="landing__central-elements">
             <div class="landing__central-elements--logo"></div>
             <h1 class="landing__central-elements--title">Vlad Bibire</h1>
@@ -13,5 +18,8 @@
 <script>
     export default {
         name: 'landing-section',
+        props: {
+            'video': String
+        }
     }
 </script>
