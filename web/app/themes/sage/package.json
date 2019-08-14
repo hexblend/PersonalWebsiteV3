@@ -9,11 +9,16 @@
     },
     "devDependencies": {
         "babel-polyfill": "^6.26.0",
+        "browser-sync": "^2.26.7",
+        "browser-sync-webpack-plugin": "2.0.1",
         "cross-env": "^5.2.0",
         "laravel-mix": "^4.1.2",
         "laravel-mix-purgecss": "^4.1.0",
+        "sass": "^1.22.9",
+        "sass-loader": "7.*",
+        "sass-rem": "^2.0.1",
         "tailwindcss": "^1.1.1",
         "vue": "^2.6.10",
-        "sass-rem": "^2.0.1"
+        "vue-template-compiler": "^2.6.10"
     }
 }

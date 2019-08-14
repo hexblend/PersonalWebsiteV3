@@ -23,7 +23,7 @@ mix.setPublicPath("dist")
     .purgeCss()
     .copy("resources/assets/img", "dist/img/")
 
-mix.browserSync("http://local.bedrock-sage-vue-starter")
+mix.browserSync("http://local.vladb.uk")
 
 if (mix.inProduction()) {
     mix.version()
