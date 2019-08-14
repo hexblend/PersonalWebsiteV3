@@ -10,6 +10,7 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  z-index: -10;
 }
 .landing__video-container--video {
   object-fit: cover;
@@ -27,19 +28,19 @@
   bottom: 0;
   background: linear-gradient(90deg, $c-darkest-teal 0%, $c-dark-blue 100%);
   opacity: 0.8;
-  z-index: 2;
+  z-index: -9;
 }
 .landing__central-elements {
   text-align: center;
   height: 50%;
-  z-index: 4;
+  min-width: 100%;
 }
 .landing__central-elements--logo {
   background: url(../img/logo.svg) no-repeat center center;
   margin: 0 auto;
-  width: 160px;
-  height: 160px;
-  margin-bottom: 16px;
+  width: rem(160px);
+  height: rem(160px);
+  margin-bottom: rem(16px);
 }
 .landing__central-elements--title {
   color: $c-white;
@@ -55,11 +56,20 @@
   letter-spacing: rem(1px);
   margin-bottom: rem(40px);
 }
+.vue-typer {
+  .custom.char {
+    color: $c-white;
+    font-weight: $fw-extraLight;
+    letter-spacing: rem(1px);
+  }
+  .custom.caret {
+    background: $c-white;
+  }
+}
 .landing__footer {
   position: absolute;
-  bottom: 30px;
+  bottom: rem(30px);
   color: $c-white;
   font-weight: $fw-light;
-  z-index: 4;
 }
 
