@@ -7,11 +7,11 @@ require("./bootstrap")
 // Require Vue
 window.Vue = require("vue")
 
-import HelloWorld from "./components/HelloWorld"
+import LandingSection from "./components/sections/LandingSection"
 
 const app = new Vue({
     el: "#app",
     components: {
-        HelloWorld
+        LandingSection
     }
 })
