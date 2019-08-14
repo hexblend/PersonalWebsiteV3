@@ -2,60 +2,20 @@
  * Font Family
  */
 
-@font-face {
-    font-family: "Inter";
-    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-Light-BETA.woff)
-        format("woff");
-    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-Light-BETA.woff2)
-        format("woff2");
-    font-weight: 300;
-}
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,700&display=swap');
 
-@font-face {
-    font-family: "Inter";
-    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-Regular.woff)
-        format("woff");
-    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-Regular.woff2)
-        format("woff2");
-    font-weight: 400;
-}
+$f-raleway: "Raleway", sans-serif;
 
-@font-face {
-    font-family: "Inter";
-    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-SemiBold.woff)
-        format("woff");
-    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-SemiBold.woff2)
-        format("woff2");
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: "Inter";
-    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-Bold.woff)
-        format("woff");
-    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-Bold.woff2)
-        format("woff2");
-    font-weight: 700;
-}
-
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900");
-
-$f-inter: "Inter", sans-serif;
-$f-source-sans: "Source Sans Pro", sans-serif;
-
-$f-primary: $f-inter;
-$f-secondary: $f-source-sans;
+$f-primary: $f-raleway;
 
 /*
  * Font Weights
  */
 
-$fw-black: 900;
 $fw-bold: 700;
-$fw-semiBold: 600;
-$fw-medium: 500;
 $fw-regular: 400;
 $fw-light: 300;
+$fw-extraLight: 200;
 
 /*
  * Font Sizes
