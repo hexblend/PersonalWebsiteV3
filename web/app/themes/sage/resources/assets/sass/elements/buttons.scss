@@ -1,0 +1,18 @@
+.btn {
+  border-radius: rem(4px);
+  font-family: $f-primary;
+  cursor: pointer;
+  text-align: center;
+  @include transition();
+
+  &:active {
+    transform: scale(0.99);
+  }
+
+  &:disabled {
+    cursor: inherit;
+    &:active {
+      transform: scale(1);
+    }
+  }
+}
