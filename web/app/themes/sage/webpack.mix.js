@@ -22,6 +22,7 @@ mix.setPublicPath("dist")
     })
     .purgeCss()
     .copy("resources/assets/img", "dist/img/")
+    .copy("resources/assets/video", "dist/video/")
 
 mix.browserSync("http://local.vladb.uk")
 
