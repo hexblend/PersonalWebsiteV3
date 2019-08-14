@@ -1,5 +1,4 @@
 .landing {
-  background: $c-teal;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -20,10 +19,20 @@
   top: 0;
   left: 0;
 }
+.landing__video-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, $c-darkest-teal 0%, $c-dark-blue 100%);
+  opacity: 0.8;
+  z-index: 2;
+}
 .landing__central-elements {
   text-align: center;
   height: 50%;
-  z-index: 2;
+  z-index: 4;
 }
 .landing__central-elements--logo {
   background: url(../img/logo.svg) no-repeat center center;
@@ -51,6 +60,6 @@
   bottom: 30px;
   color: $c-white;
   font-weight: $fw-light;
-  text-transform: lowercase;
+  z-index: 4;
 }
 
