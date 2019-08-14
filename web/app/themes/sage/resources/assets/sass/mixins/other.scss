@@ -1,0 +1,9 @@
+/* Transitions */
+@mixin transition($element: all, $speed: .25s, $easing: ease-in-out) {
+  transition: $element $speed $easing;
+}
+
+/* Shadows */
+@mixin shadow-default($shadow: 0 0 9px 0, $color: $c-black, $opacity: 0.12) {
+  box-shadow: rem($shadow rgba($color, $opacity))!important;
+}

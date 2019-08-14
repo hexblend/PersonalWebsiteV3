@@ -1,0 +1,148 @@
+/* ==========================================================================
+   #Headings
+   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $f-primary;
+
+  color: $c-heading;
+  line-height: 1.3;
+
+  em {
+    line-height: 1.3,
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: $fw-regular;
+}
+
+h1 {
+  font-size: $h-1;
+  line-height: 1.6;
+
+  @include screen-lt($bp-large) {
+    font-size: $h-1-tablet;
+  }
+
+  @include mix-sm-mobile {
+    font-size: $h-1-mobile;
+  }
+}
+
+h2 {
+  font-size: $h-2;
+
+  @include screen-lt($bp-large) {
+    font-size: $h-2-tablet;
+  }
+
+  @include mix-sm-mobile {
+    font-size: $h-2-mobile;
+  }
+}
+
+h3 {
+  font-size: $h-3;
+
+  @include screen-lt($bp-large) {
+    font-size: $h-3-tablet;
+  }
+
+  @include mix-sm-mobile {
+    font-size: $h-3-mobile;
+  }
+}
+
+h4 {
+  font-size: $h-4;
+
+  @include screen-lt($bp-large) {
+    font-size: $h-4-tablet;
+  }
+
+  @include mix-sm-mobile {
+    font-size: $h-4-mobile;
+  }
+}
+
+h5 {
+  font-size: $h-5;
+
+  @include screen-lt($bp-large) {
+    font-size: $h-5-tablet;
+  }
+
+  @include mix-sm-mobile {
+    font-size: $h-5-mobile;
+  }
+}
+
+h6 {
+  font-size: $h-6;
+  line-height: 1.5;
+
+  @include screen-lt($bp-large) {
+    font-size: $h-6-tablet;
+  }
+
+  @include mix-sm-mobile {
+    font-size: $h-6-mobile;
+  }
+}
+
+/* ==========================================================================
+   #Paragraphs
+   ========================================================================== */
+
+p {
+  font-family: $f-primary;
+  line-height: 1.5;
+  font-size: $p-regular;
+  letter-spacing: rem(0.5px);
+
+  color: $c-paragraph;
+
+  @include screen-lt($bp-large) {
+    font-size: $p-regular-tablet;
+  }
+
+  @include mix-sm-mobile {
+    font-size: $p-regular-mobile;
+  }
+}
+
+/* ==========================================================================
+   #Links
+   ========================================================================= */
+a:not(.defer) {
+  cursor: pointer;
+  text-decoration: none;
+
+  span {
+
+  }
+
+  &:active,
+  &:focus,
+  &:visited {
+
+  }
+
+  &:hover {
+
+  }
+}
+
+/* ==========================================================================
+   #Other
+   ========================================================================= */
+em {
+
+}

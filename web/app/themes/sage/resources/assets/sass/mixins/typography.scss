@@ -1,0 +1,37 @@
+/* Font Family */
+@mixin font-primary-bold() {
+  font-family: $f-primary;
+  font-weight: $fw-bold;
+}
+
+@mixin font-primary-semiBold() {
+  font-family: $f-primary;
+  font-weight: $fw-semiBold;
+}
+
+@mixin font-primary-medium() {
+  font-family: $f-primary;
+  font-weight: $fw-medium;
+}
+
+@mixin font-primary-regular() {
+  font-family: $f-primary;
+  font-weight: $fw-regular;
+}
+
+@mixin font-secondary-bold() {
+  font-family: $f-secondary;
+  font-weight: $fw-bold;
+}
+@mixin font-secondary-semiBold() {
+  font-family: $f-secondary;
+  font-weight: $fw-semiBold;
+}
+@mixin font-secondary-medium() {
+  font-family: $f-secondary;
+  font-weight: $fw-medium;
+}
+@mixin font-secondary-regular() {
+  font-family: $f-secondary;
+  font-weight: $fw-regular;
+}

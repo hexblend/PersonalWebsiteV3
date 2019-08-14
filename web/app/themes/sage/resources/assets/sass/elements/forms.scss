@@ -1,0 +1,16 @@
+label {
+  font-family: $f-primary;
+  font-weight: normal;
+  font-size: rem(16px);
+  line-height: 1.5;
+  color: $c-dark-blue;
+
+  &.required {
+    &:after {
+      content: '*';
+      position: absolute;
+      color: $c-dark-blue;
+      top: rem(3px);
+    }
+  }
+}

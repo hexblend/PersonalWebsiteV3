@@ -1,0 +1,117 @@
+/*
+ * Font Family
+ */
+
+@font-face {
+    font-family: "Inter";
+    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-Light-BETA.woff)
+        format("woff");
+    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-Light-BETA.woff2)
+        format("woff2");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-Regular.woff)
+        format("woff");
+    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-Regular.woff2)
+        format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-SemiBold.woff)
+        format("woff");
+    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-SemiBold.woff2)
+        format("woff2");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-Bold.woff)
+        format("woff");
+    src: url(/app/themes/lumberjack/resources/fonts/Inter/Inter-Bold.woff2)
+        format("woff2");
+    font-weight: 700;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900");
+
+$f-inter: "Inter", sans-serif;
+$f-source-sans: "Source Sans Pro", sans-serif;
+
+$f-primary: $f-inter;
+$f-secondary: $f-source-sans;
+
+/*
+ * Font Weights
+ */
+
+$fw-black: 900;
+$fw-bold: 700;
+$fw-semiBold: 600;
+$fw-medium: 500;
+$fw-regular: 400;
+$fw-light: 300;
+
+/*
+ * Font Sizes
+ */
+
+$rem-baseline: 16px;
+
+/* Desktop */
+
+$txt-large: rem(28px);
+$txt-medium: rem(20px);
+$txt-regular: rem(16px);
+$txt-small: rem(14px);
+$txt-xsmall: rem(11px);
+
+$p-regular: rem(18px);
+$p-small: rem(16px);
+
+$h-1: rem(40px);
+$h-2: rem(32px);
+$h-3: rem(28px);
+$h-4: rem(24px);
+$h-5: rem(20px);
+$h-6: rem(14px);
+
+/* Responsive */
+
+/* Tablet */
+
+$txt-large-tablet: rem(20px);
+$txt-medium-tablet: rem(18px);
+$txt-regular-tablet: rem(16px);
+$txt-small-tablet: rem(14px);
+
+$p-regular-tablet: rem(16px);
+$p-small-tablet: rem(14px);
+
+$h-1-tablet: rem(40px);
+$h-2-tablet: rem(36px);
+$h-3-tablet: rem(28px);
+$h-4-tablet: rem(24px);
+$h-5-tablet: rem(20px);
+$h-6-tablet: rem(18px);
+
+/* Mobile */
+$txt-large-mobile: rem(18px);
+$txt-medium-mobile: rem(16px);
+$txt-regular-mobile: rem(14px);
+$txt-small-mobile: rem(12px);
+
+$p-regular-mobile: rem(16px);
+$p-small-mobile: rem(14px);
+
+$h-1-mobile: rem(36px);
+$h-2-mobile: rem(28px);
+$h-3-mobile: rem(24px);
+$h-4-mobile: rem(20px);
+$h-5-mobile: rem(18px);
+$h-6-mobile: rem(18px);
