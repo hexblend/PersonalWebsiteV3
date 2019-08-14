@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    <landing-section></landing-section>
+    <landing-section video="@asset('video/sea.mp4')"></landing-section>
 @endsection
