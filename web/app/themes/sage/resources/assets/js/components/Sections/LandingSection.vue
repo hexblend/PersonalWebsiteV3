@@ -8,11 +8,11 @@
         <div class="landing__video-gradient"></div>
         <div class="landing__central-elements">
             <div class="landing__central-elements--logo"></div>
-            <h1 v-if="name" class="landing__central-elements--title">{{ name }}</h1>
-            <h2 v-if="slug" class="landing__central-elements--slug">
-                {{ slug }}
+            <h1 v-if="fields.name" class="landing__central-elements--title">{{ fields.name }}</h1>
+            <h2 v-if="fields.slug" class="landing__central-elements--slug">
+                {{ fields.slug }}
                 <vue-typer
-                        :text='[slug_ending_1, slug_ending_2, slug_ending_3]'
+                        :text='[fields.slug_ending_1, fields.slug_ending_2, fields.slug_ending_3]'
                         initial-action='erasing'
                         :pre-erase-delay='2500'
                         :erase-delay='100'
@@ -21,9 +21,9 @@
                         erase-style='backspace'
                 ></vue-typer>
             </h2>
-            <a v-if="button_text" class="landing__central-elements--button btn btn-ghost" href="#about">{{button_text}}</a>
+            <a v-if="fields.button_text" class="landing__central-elements--button btn btn-ghost" href="#about">{{ fields.button_text }}</a>
         </div>
-        <p v-if="bottom_text" class="landing__footer">{{bottom_text}}️</p>
+        <p v-if="fields.bottom_text" class="landing__footer">{{ fields.bottom_text }}️</p>
     </section>
 </template>
 
@@ -31,23 +31,17 @@
     import { VueTyper } from 'vue-typer'
     export default {
         name: 'landing-section',
+        components: {
+            VueTyper
+        },
         data() {
             return {
-                endings: [this.slug_ending_1, this.slug_ending_2, this.slug_ending_3]
+                fields: JSON.parse(this.landing_fields)
             }
         },
         props: {
-            'video': String,
-            'name': String,
-            'slug': String,
-            'slug_ending_1': String,
-            'slug_ending_2': String,
-            'slug_ending_3': String,
-            'button_text': String,
-            'bottom_text': String
-        },
-        components: {
-            VueTyper
+            video: String,
+            landing_fields: String
         }
     }
 </script>
