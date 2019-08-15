@@ -36,10 +36,13 @@
   min-width: 100%;
 }
 .landing__central-elements--logo {
-  background: url(../img/logo.svg) no-repeat center center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
   margin: 0 auto;
   width: rem(160px);
   height: rem(160px);
+  position: inherit;
   margin-bottom: rem(16px);
 }
 .landing__central-elements--title {

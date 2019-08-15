@@ -11,6 +11,7 @@ class FrontPage extends Controller
     public function landingFields()
     {
         return (object) [
+            'logo' => get_field('logo'),
             'name' => get_field('name'),
             'slug' => get_field('slug'),
             'slug_ending_1' => get_field('slug_ending_1'),
