@@ -1,0 +1,78 @@
+.landing {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.landing__video-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -10;
+}
+.landing__video-container--video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.landing__video-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, $c-darkest-teal 0%, $c-dark-blue 100%);
+  opacity: 0.8;
+  z-index: -9;
+}
+.landing__central-elements {
+  text-align: center;
+  height: 50%;
+  min-width: 100%;
+}
+.landing__central-elements--logo {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin: 0 auto;
+  width: rem(160px);
+  height: rem(160px);
+  position: inherit;
+  margin-bottom: rem(16px);
+}
+.landing__central-elements--title {
+  color: $c-white;
+  font-weight: $fw-extraLight;
+  text-transform: uppercase;
+  font-size: rem(72px);
+  letter-spacing: rem(5px);
+  line-height: 1.25;
+}
+.landing__central-elements--slug {
+  color: $c-white;
+  font-weight: $fw-extraLight;
+  letter-spacing: rem(1px);
+  margin-bottom: rem(40px);
+}
+.vue-typer {
+  .custom.char {
+    color: $c-white;
+    font-weight: $fw-extraLight;
+    letter-spacing: rem(1px);
+  }
+  .custom.caret {
+    background: $c-white;
+  }
+}
+.landing__footer {
+  position: absolute;
+  bottom: rem(30px);
+  color: $c-white;
+  font-weight: $fw-light;
+}
+

@@ -1,5 +1,5 @@
 /* Transitions */
-@mixin transition($element: all, $speed: .25s, $easing: ease-in-out) {
+@mixin transition($element: all, $speed: .17s, $easing: ease-in-out) {
   transition: $element $speed $easing;
 }
 

@@ -3,7 +3,7 @@
 @include('partials.head')
 <body @php body_class() @endphp>
 {{--@php do_action('get_header') @endphp--}}
-    <div id="app" class="container" role="document">
+    <div id="app" role="document">
         {{--@include('partials.navbar')--}}
         @yield('content')
         {{--@if (App\display_sidebar())--}}

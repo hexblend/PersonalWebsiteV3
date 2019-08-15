@@ -80,6 +80,7 @@
 @import "elements/generic";
 @import "elements/typography";
 @import "elements/forms.scss";
+@import "elements/buttons.scss";
 
 // Objects
 
@@ -88,6 +89,7 @@
 // Pages
 
 // Sections
+@import "sections/landing";
 
 // Vendors
 .columns {
