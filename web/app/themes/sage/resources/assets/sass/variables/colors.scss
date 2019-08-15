@@ -33,4 +33,5 @@ $c-link: $c-blue;
 * Gradients
  */
 $c-main-gradient: linear-gradient(90deg, $c-teal 0%, $c-blue 100%);
+$c-main-gradient-reversed: linear-gradient(90deg, $c-blue 0%, $c-teal 100%);
 $c-darkest-gradient: linear-gradient(90deg, $c-darkest-teal 0%, $c-darkest-blue 100%);
