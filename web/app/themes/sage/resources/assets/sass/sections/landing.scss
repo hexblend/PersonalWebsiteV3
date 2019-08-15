@@ -49,20 +49,20 @@
   font-weight: $fw-extraLight;
   text-transform: uppercase;
   font-size: rem(72px);
-  letter-spacing: rem(5px);
+  letter-spacing: $ls-bigDistance;
   line-height: 1.25;
 }
 .landing__central-elements--slug {
   color: $c-white;
   font-weight: $fw-extraLight;
-  letter-spacing: rem(1px);
+  letter-spacing: $ls-smallDistance;
   margin-bottom: rem(40px);
 }
 .vue-typer {
   .custom.char {
     color: $c-white;
     font-weight: $fw-extraLight;
-    letter-spacing: rem(1px);
+    letter-spacing: $ls-smallDistance;
   }
   .custom.caret {
     background: $c-white;
