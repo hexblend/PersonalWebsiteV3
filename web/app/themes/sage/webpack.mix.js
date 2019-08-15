@@ -18,7 +18,10 @@ mix.setPublicPath("dist")
     .sass("resources/assets/sass/app.scss", "css/")
     .options({
         processCssUrls: false,
-        postCss: [require("tailwindcss")("./tailwind.js")]
+        postCss: [require("tailwindcss")("./tailwind.js"), require('autoprefixer')({
+            browsers: ['last 40 versions'],
+            grid: true
+        })]
     })
     .purgeCss()
     .copy("resources/assets/img", "dist/img/")
