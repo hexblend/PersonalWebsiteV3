@@ -1,3 +1,11 @@
 .projects {
   min-height: 500px;
 }
+.projects__heading{
+  @include section-heading()
+}
+.projects__previews-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px auto;
+}
