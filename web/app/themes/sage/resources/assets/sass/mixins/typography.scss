@@ -35,3 +35,9 @@
   font-family: $f-secondary;
   font-weight: $fw-regular;
 }
+
+@mixin text-gradient(){
+  background: $c-main-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

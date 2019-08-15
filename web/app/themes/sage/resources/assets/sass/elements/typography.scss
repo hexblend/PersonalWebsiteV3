@@ -50,6 +50,10 @@ h2 {
 
 h3 {
   font-size: $h-3;
+  font-weight: $fw-bold;
+  letter-spacing: $ls-closeLetters;
+  @include text-gradient();
+  display: inline;
 
   @include screen-lt($bp-large) {
     font-size: $h-3-tablet;
