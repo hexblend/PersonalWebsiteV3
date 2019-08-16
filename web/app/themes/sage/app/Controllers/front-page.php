@@ -52,4 +52,29 @@ class FrontPage extends Controller
         }
         return $projects;
     }
+    public function testimonials()
+    {
+        $testimonials = [];
+        $args = [
+            'posts_per_page' => -1,
+            'orderby' => 'DATE',
+            'order' => 'DESC',
+            'post_type' => 'testimonial'
+        ];
+        $the_query = new \WP_Query($args);
+        if ($the_query->post_count > 0) {
+            $testimonials = array_map(function ($testimonial) {
+                $quote = esc_html(get_field('quote', $testimonial));
+                $author = esc_html(get_field('author', $testimonial));
+                $author_position = esc_html(get_field('author_position', $testimonial));
+                return (object) [
+                    'quote' => $quote,
+                    'author' => $author,
+                    'author_position' => $author_position
+                ];
+            }, $the_query->posts);
+            wp_reset_postdata();
+        }
+        return $testimonials;
+    }
 }
