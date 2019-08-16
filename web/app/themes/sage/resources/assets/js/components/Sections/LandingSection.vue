@@ -24,7 +24,7 @@
                         erase-style='backspace'
                 ></vue-typer>
             </h2>
-            <a v-if="fields.button_text" class="landing__central-elements--button btn btn-ghost" href="#about">{{ fields.button_text }}</a>
+            <a v-if="fields.button_text" class="landing__central-elements--button btn btn-ghost" href="#projects">{{ fields.button_text }}</a>
         </div>
         <!-- Section Footer -->
         <p v-if="fields.bottom_text" class="landing__footer">{{ fields.bottom_text }}️</p>

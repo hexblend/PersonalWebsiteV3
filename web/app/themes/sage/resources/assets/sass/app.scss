@@ -73,23 +73,25 @@
 
 // Mixins
 @import "mixins/breakpoints";
-@import "mixins/typography.scss";
-@import "mixins/other.scss";
+@import "mixins/typography";
+@import "mixins/other";
 
 // Elements
 @import "elements/generic";
 @import "elements/typography";
-@import "elements/forms.scss";
-@import "elements/buttons.scss";
+@import "elements/forms";
+@import "elements/buttons";
 
 // Objects
 
 // Components
+@import "components/project-preview";
 
 // Pages
 
 // Sections
 @import "sections/landing";
+@import "sections/projects";
 
 // Vendors
 .columns {

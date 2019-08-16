@@ -35,3 +35,15 @@
   font-family: $f-secondary;
   font-weight: $fw-regular;
 }
+
+@mixin text-gradient(){
+  background: $c-main-gradient-reversed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin section-heading(){
+  font-weight: $fw-bold;
+  letter-spacing: $ls-closeLetters;
+  @include text-gradient();
+  display: inline;
+}
