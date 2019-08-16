@@ -15,17 +15,17 @@
     margin-right: 0;
   }
   &:hover {
-    @include shadow-default();
     border-radius: 0;
     border-top-right-radius: rem(20px);
     border-top-left-radius: rem(20px);
-    transform: scale(1.03);
+    transform: scale(1.025);
     z-index: 15;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.25);
   }
   &:hover > .project-preview__info {
     visibility: visible;
     opacity: 1;
-    @include shadow-default();
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.25);
     top: rem(280px);
     left: 0;
     border-radius: 0;
@@ -35,7 +35,7 @@
 }
 .project-preview__info {
   position: absolute;
-  top: rem(295px);
+  top: rem(290px);
   background: $c-white;
   padding: rem(10px);
   z-index: 10;
