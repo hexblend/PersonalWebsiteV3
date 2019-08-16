@@ -1,6 +1,6 @@
 <template>
     <section class="projects" id="projects">
-        <h3 class="projects__heading mb-4">Some of my work</h3>
+        <h3 class="projects__heading">Some of my work</h3>
         <div class="projects__previews-wrapper">
                 <project-preview v-for="(project, index) in projects" :key="index" :project="project"></project-preview>
         </div>
@@ -19,8 +19,6 @@
         },
         props: {
             allprojects: String
-        },
-        mounted() {
         }
     }
 </script>

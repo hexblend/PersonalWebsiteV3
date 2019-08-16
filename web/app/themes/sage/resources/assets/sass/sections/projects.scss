@@ -1,5 +1,5 @@
 .projects {
-  min-height: 600px;
+  padding-bottom: rem(100px);
 }
 .projects__heading{
   @include section-heading()
@@ -7,5 +7,6 @@
 .projects__previews-wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px auto;
+  margin: 0 auto;
+  margin-top: rem(32px);
 }

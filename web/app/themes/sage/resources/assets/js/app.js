@@ -5,15 +5,17 @@ import "babel-polyfill"
 require("./bootstrap")
 
 // Require Vue
-window.Vue = require("vue")
+window.Vue = require("vue");
 
 import LandingSection from "./components/sections/LandingSection"
 import ProjectsSection from "./components/sections/ProjectsSection"
+import TestimonialsSection from "./components/sections/TestimonialsSection"
 
 const app = new Vue({
     el: "#app",
     components: {
         LandingSection,
-        ProjectsSection
+        ProjectsSection,
+        TestimonialsSection
     }
 })

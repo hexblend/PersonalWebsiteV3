@@ -21,9 +21,6 @@
         },
         props: {
             project: Object
-        },
-        mounted(){
-            console.log(this.project);
         }
     }
 </script>
