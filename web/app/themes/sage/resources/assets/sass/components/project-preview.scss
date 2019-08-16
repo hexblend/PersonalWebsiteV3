@@ -1,13 +1,12 @@
 .project-preview {
-  background: $c-mid-grey;
-  background-size: cover;
   width: 280px;
   height: 280px;
+  background: url("../img/project-preview-default.jpg") no-repeat center center;
+  background-size: 120%;
   border-radius: rem(20px);
   margin: rem(15px);
   position: relative;
   @include transition();
-
   &:nth-child(3n+1) {
     margin-left: 0;
   }
@@ -36,11 +35,26 @@
 .project-preview__info {
   position: absolute;
   top: rem(290px);
+  min-width: 100%;
   background: $c-white;
-  padding: rem(10px);
+  padding: rem(16px);
   z-index: 10;
   border-radius: rem(20px);
   visibility: hidden;
   opacity: 0;
   @include transition();
+}
+.project-preview__info--name {
+  margin-bottom: rem(8px);
+}
+.project-preview__info--description {
+  font-size: $txt-small;
+  margin-bottom: rem(16px);
+}
+.project-preview__info--permalink {
+  font-size: $txt-small;
+  color: $c-darkest-grey;
+  &:hover {
+    text-decoration: underline;
+  }
 }
