@@ -22,4 +22,34 @@ class FrontPage extends Controller
         ];
     }
 
+    /**
+     * @return array
+     */
+    public function projects()
+    {
+        $args = [
+            'posts_per_page' => -1,
+            'orderby' => 'menu_order',
+            'oder' => 'DESC',
+            'post_type' => 'projects'
+        ];
+        $the_query = new \WP_Query($args);
+        $projects = [];
+        if ($the_query->post_count > 0) {
+            $projects = array_map(function ($project) {
+                $name = get_the_title($project);
+                $description = get_field('project_small_description', $project);
+                $permalink = get_post_permalink($project);
+                $preview_image = get_field('project_preview_image', $project);
+                return (object) [
+                    'name' => $name,
+                    'description' => $description,
+                    'preview_image' => $preview_image,
+                    'permalink' => $permalink
+                ];
+            }, $the_query->posts);
+            wp_reset_postdata();
+        }
+        return $projects;
+    }
 }
