@@ -4,6 +4,7 @@
 
 namespace App;
 
+use App\Traits\Field;
 use Sober\Controller\Controller;
 
 class FrontPage extends Controller
@@ -22,9 +23,6 @@ class FrontPage extends Controller
         ];
     }
 
-    /**
-     * @return array
-     */
     public function projects()
     {
         $args = [
@@ -76,5 +74,13 @@ class FrontPage extends Controller
             wp_reset_postdata();
         }
         return $testimonials;
+    }
+    public function aboutFields()
+    {
+        return (object) [
+            'heading' => esc_html(get_field('about_title')),
+            'content' => esc_html(get_field('about_content')),
+            'image' => get_field('about_image')
+        ];
     }
 }

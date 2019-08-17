@@ -2,6 +2,7 @@
   background: $c-main-gradient-reversed;
   padding: rem(50px 70px 0 70px);
   position: relative;
+  margin-top: rem(40px);
 }
 .about__texture {
   position: absolute;
@@ -43,7 +44,5 @@
   width: 400px;
   height: 500px;
   max-width: 40%;
-  background: url('../img/about-vlad.png') no-repeat center center;
-  background-size: cover;
   z-index: 1;
 }

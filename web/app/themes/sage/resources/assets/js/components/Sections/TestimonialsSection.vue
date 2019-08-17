@@ -48,9 +48,6 @@
         },
         props: {
             alltestimonials: String
-        },
-        mounted() {
-            console.log(this.alltestimonials);
         }
     }
 </script>
