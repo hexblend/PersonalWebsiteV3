@@ -5,4 +5,5 @@
         <projects-section allProjects='{!! json_encode($projects) !!}'></projects-section>
         <testimonials-section allTestimonials='{!! json_encode($testimonials) !!}'></testimonials-section>
     </div>
+    <about-section about_fields='{!! json_encode($about_fields) !!}'></about-section>
 @endsection

@@ -1,0 +1,48 @@
+.about {
+  background: $c-main-gradient-reversed;
+  padding: rem(50px 70px 0 70px);
+  position: relative;
+  margin-top: rem(40px);
+}
+.about__texture {
+  position: absolute;
+  top: 0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  max-width: 100vw;
+  background: url('../img/about-texture.png') no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+}
+.about__content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about__content--text {
+  max-width: 40%;
+  z-index: 1;
+}
+.about__heading {
+  color: $c-white;
+  font-weight: $fw-bold;
+  letter-spacing: $ls-closeLetters;
+  margin-bottom: rem(32px);
+
+  font-size: $h-2;
+}
+.about__content--text p{
+  color: $c-white;
+  margin-bottom: rem(24px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.about__content--image{
+  width: 400px;
+  height: 500px;
+  max-width: 40%;
+  z-index: 1;
+}
