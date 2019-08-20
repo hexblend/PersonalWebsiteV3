@@ -17,6 +17,7 @@ $c-darkest-blue: #05608b;
 $c-teal: #04a4a2;
 $c-dark-teal: #06b39c;
 $c-darkest-teal: #075d52;
+$c-mid-teal: #028473;
 
 
 /*
@@ -35,3 +36,4 @@ $c-link: $c-blue;
 $c-main-gradient: linear-gradient(90deg, $c-teal 0%, $c-blue 100%);
 $c-main-gradient-reversed: linear-gradient(90deg, $c-blue 0%, $c-teal 100%);
 $c-darkest-gradient: linear-gradient(90deg, $c-darkest-teal 0%, $c-darkest-blue 100%);
+$c-mid-gradient-reversed: linear-gradient(56deg, $c-darkest-blue 0%, $c-mid-teal 100%);
