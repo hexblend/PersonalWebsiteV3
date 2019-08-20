@@ -18,10 +18,11 @@ mix.setPublicPath("dist")
     .sass("resources/assets/sass/app.scss", "css/")
     .options({
         processCssUrls: false,
-        postCss: [require("tailwindcss")("./tailwind.js")]
+        postCss: [require("tailwindcss")("./tailwind.js"), require('autoprefixer')()]
     })
     .purgeCss()
     .copy("resources/assets/img", "dist/img/")
+    .copy("resources/assets/video", "dist/video/")
 
 mix.browserSync("http://local.vladb.uk")
 

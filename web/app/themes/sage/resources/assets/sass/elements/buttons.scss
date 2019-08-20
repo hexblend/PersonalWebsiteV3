@@ -1,0 +1,42 @@
+.btn {
+  border-radius: rem(4px);
+  font-family: $f-primary;
+  cursor: pointer;
+  text-align: center;
+  @include transition();
+
+  &:active {
+    transform: scale(0.99);
+  }
+
+  &:disabled {
+    cursor: inherit;
+    &:active {
+      transform: scale(1);
+    }
+  }
+}
+
+.btn-ghost {
+  background: rgba(0,0,0,0);
+  font-size: $txt-regular;
+  width: 100%;
+  padding: 8px 40px;
+  color: $c-white;
+  border: 1px solid $c-white;
+  span {
+    font-weight: $fw-regular;
+  }
+  &:hover {
+    background: $c-white;
+    color: $c-black;
+  }
+  &:focus {
+    background: $c-white;
+    color: $c-black;
+  }
+  &:disabled {
+    background: $c-mid-grey;
+  }
+}
+
