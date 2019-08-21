@@ -24,7 +24,7 @@ mix.setPublicPath("dist")
     .copy("resources/assets/img", "dist/img/")
     .copy("resources/assets/video", "dist/video/")
 
-mix.browserSync("http://local.vladb.uk")
+mix.browserSync("http://localhost:8888")
 
 if (mix.inProduction()) {
     mix.version()
