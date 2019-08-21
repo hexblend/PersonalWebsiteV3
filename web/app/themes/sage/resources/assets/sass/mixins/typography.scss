@@ -37,3 +37,12 @@
     @include text-gradient();
     display: inline;
 }
+@mixin section-heading-center(){
+    font-weight: $fw-bold;
+    letter-spacing: $ls-closeLetters;
+    display: block;
+    text-align: center;
+    background: linear-gradient(90deg, $c-blue 40%, $c-teal 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
