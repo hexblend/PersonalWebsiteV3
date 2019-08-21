@@ -62,10 +62,6 @@
  */
 @import "~sass-rem/_rem";
 
-// Resets
-@import "generic/reset";
-@import "generic/shared";
-
 // Variables
 @import "variables/breakpoints";
 @import "variables/colors";
@@ -75,6 +71,10 @@
 @import "mixins/breakpoints";
 @import "mixins/typography";
 @import "mixins/other";
+
+// Resets
+@import "generic/reset";
+@import "generic/shared";
 
 // Elements
 @import "elements/generic";
