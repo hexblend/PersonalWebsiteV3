@@ -5,11 +5,6 @@
 }
 .wrapper-large {
     margin: 0 auto;
-    padding: rem(72px 240px);
-    max-width: 100%;
-    @include mix-wide() {
-        max-width: rem(1200px);
-        padding: rem(72px 110px);
-        margin: 0 auto;
-    }
+    max-width: 1440px;
+    padding: 0 55px;
 }
