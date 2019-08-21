@@ -15,7 +15,7 @@
         "cross-env": "^5.2.0",
         "laravel-mix": "^4.1.2",
         "laravel-mix-purgecss": "^4.1.0",
-        "sass": "^1.22.9",
+        "sass": "^1.22.10",
         "sass-loader": "7.*",
         "sass-rem": "^2.0.1",
         "tailwindcss": "^1.1.1",
