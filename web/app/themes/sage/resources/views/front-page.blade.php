@@ -6,4 +6,7 @@
         <testimonials-section allTestimonials='{!! json_encode($testimonials) !!}'></testimonials-section>
     </div>
     <about-section about_fields='{!! json_encode($about_fields) !!}'></about-section>
+    <div class="wrapper">
+        <packages-section></packages-section>
+    </div>
 @endsection
