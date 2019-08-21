@@ -86,6 +86,7 @@
 
 // Components
 @import "components/project-preview";
+@import "components/single-package";
 
 // Pages
 
@@ -94,6 +95,7 @@
 @import "sections/projects";
 @import "sections/testimonials";
 @import "sections/about";
+@import "sections/packages";
 
 // Vendors
 .columns {
