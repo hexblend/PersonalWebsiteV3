@@ -12,15 +12,8 @@
                 <p>- Wireframes ti picture how your website should look like</p>
                 <p>- Feedback & additions session</p>
             </div>
-<!--            <div class="single-package__description&#45;&#45;column2">-->
-<!--                <p>- Designs of a multi-page website</p>-->
-<!--                <p>- Final feedback session on designs</p>-->
-<!--                <p>- Coding the website to include multiple user roles & ease in editing</p>-->
-<!--                <p>- Final feedback on website's features</p>-->
-<!--                <p>- Training session</p>-->
-<!--            </div>-->
         </div>
-        <button class="single-package__button btn btn-filled">Get in touch</button>
+        <a href="#about" class="single-package__button btn btn-filled">Get in touch</a>
     </div>
     <div class="single-package">
         <div class="single-package__heading">
@@ -42,7 +35,7 @@
                 <p>- Training session</p>
             </div>
         </div>
-        <button class="single-package__button btn btn-filled">Get in touch</button>
+        <a href="#about" class="single-package__button btn btn-filled">Get in touch</a>
     </div>
     </div>
 </template>

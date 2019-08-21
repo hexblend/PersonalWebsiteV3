@@ -45,9 +45,12 @@
     margin-bottom: rem(5px);
 }
 .single-package__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: rem(18px);
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    flex: 1;
     padding: rem(0 16px);
+    flex: 1;
 }
