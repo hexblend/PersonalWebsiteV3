@@ -33,7 +33,7 @@ class FrontPage extends Controller
     public function testimonialsFields()
     {
         return (object) [
-            'title' => esc_html(get_field('title'))
+            'title' => esc_html(get_field('testimonials_title'))
         ];
     }
     public function aboutFields()
@@ -44,11 +44,11 @@ class FrontPage extends Controller
             'image' => get_field('about_image')
         ];
     }
-    public function packagesSection()
+    public function packagesFields()
     {
         return (object) [
-            'title' => esc_html(get_field('packages_tilte')),
-            'subtitle' => esc_html(get_field('packages_subtitle'))
+            'title' => esc_html(get_field('packages_title')),
+            'subtitle' => esc_html(get_field('packages_description'))
         ];
     }
 
