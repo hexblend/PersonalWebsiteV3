@@ -12,6 +12,7 @@
         ></projects-section>
 
         <testimonials-section
+            testimonials_fields='{!! json_encode($testimonials_fields) !!}'
             allTestimonials='{!! json_encode($testimonials) !!}'
         ></testimonials-section>
     </div>
@@ -21,6 +22,8 @@
     ></about-section>
 
     <div class="wrapper-large">
-        <packages-section></packages-section>
+        <packages-section
+            packages_fields='{!! json_encode($packages_fields) !!}'
+        ></packages-section>
     </div>
 @endsection

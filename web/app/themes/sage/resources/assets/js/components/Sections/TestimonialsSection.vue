@@ -2,7 +2,7 @@
     <section class="testimonials" id="testimonials">
         <div class="testimonials__heading mb-5">
             <h3 class="testimonials__heading--text">
-                Word of mouth
+                {{ fields.title }}
             </h3>
         </div>
 
@@ -43,11 +43,13 @@
         },
         data() {
           return {
+              fields: JSON.parse(this.testimonials_fields),
               testimonials: JSON.parse(this.alltestimonials)
           }
         },
         props: {
-            alltestimonials: String
+            alltestimonials: String,
+            testimonials_fields: String
         }
     }
 </script>
