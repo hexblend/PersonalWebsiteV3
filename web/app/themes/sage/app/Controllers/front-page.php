@@ -9,6 +9,7 @@ use Sober\Controller\Controller;
 
 class FrontPage extends Controller
 {
+
     // Main Sections Fields
 
     public function landingFields()
@@ -51,8 +52,6 @@ class FrontPage extends Controller
             'subtitle' => esc_html(get_field('packages_description'))
         ];
     }
-
-
 
     // Custom Post Types Fields
 
@@ -107,5 +106,30 @@ class FrontPage extends Controller
             wp_reset_postdata();
         }
         return $testimonials;
+    }
+    public function packages()
+    {
+        $packages = [];
+        $args = [
+            'posts_per_page' => -1,
+            'post_type' => 'package',
+            'order_by' => 'DATE',
+            'order' => 'ASC'
+        ];
+        $the_query = new \WP_Query($args);
+        if($the_query->post_count > 0) {
+            $packages = array_map(function ($package) {
+                return (object) [
+                    'title' => esc_html(get_the_title($package)),
+                    'subtitle' => esc_html(get_field('package_subtitle', $package)),
+                    'description_title' => esc_html(get_field('package_description_title', $package)),
+                    'description_column_1' => esc_html(get_field('package_description_column_1', $package)),
+                    'description_column_2' => esc_html(get_field('package_description_column_2', $package)),
+                    'button_text' => esc_html(get_field('package_button_text', $package))
+                ];
+            }, $the_query->posts);
+            wp_reset_postdata();
+        }
+        return $packages;
     }
 }
