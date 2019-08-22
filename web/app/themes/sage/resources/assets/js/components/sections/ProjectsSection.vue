@@ -1,6 +1,6 @@
 <template>
     <section class="projects" id="projects">
-        <h3 class="projects__heading">Some of my work</h3>
+        <h3 class="projects__heading">{{ fields.title }}</h3>
         <div class="projects__previews-wrapper">
                 <project-preview v-for="(project, index) in projects" :key="index" :project="project"></project-preview>
         </div>
@@ -14,11 +14,13 @@
         components: {ProjectPreview},
         data(){
             return {
+                fields: JSON.parse(this.work_fields),
                 projects: JSON.parse(this.allprojects)
             }
         },
         props: {
-            allprojects: String
-        }
+            allprojects: String,
+            work_fields: String
+        },
     }
 </script>

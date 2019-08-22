@@ -11,6 +11,7 @@ import LandingSection from "./components/sections/LandingSection"
 import ProjectsSection from "./components/sections/ProjectsSection"
 import TestimonialsSection from "./components/sections/TestimonialsSection"
 import AboutSection from "./components/sections/AboutSection"
+import PackagesSection from "./components/sections/PackagesSection"
 
 const app = new Vue({
     el: "#app",
@@ -18,6 +19,7 @@ const app = new Vue({
         LandingSection,
         ProjectsSection,
         TestimonialsSection,
-        AboutSection
+        AboutSection,
+        PackagesSection
     }
 })

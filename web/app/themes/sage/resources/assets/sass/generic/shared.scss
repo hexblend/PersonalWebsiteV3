@@ -1,9 +1,10 @@
-.site-wrapper {
-  margin: 0 auto;
-  max-width: rem(1200px);
+.wrapper-small {
+    margin: 0 auto;
+    padding: rem(72px 110px);
+    max-width: rem(1200px);
 }
-.wrapper {
-  margin: 0 auto;
-  padding: rem(72px 110px);
-  max-width: 1200px;
+.wrapper-large {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 55px;
 }

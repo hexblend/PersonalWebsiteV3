@@ -1,0 +1,13 @@
+.packages {
+    padding: rem(72px 0);
+}
+.packages__heading {
+    @include section-heading-center;
+}
+.packages__subheading {
+    font-size: $h-5;
+    text-align: center;
+}
+.packages__wrapper {
+    margin-top: rem(56px);
+}
