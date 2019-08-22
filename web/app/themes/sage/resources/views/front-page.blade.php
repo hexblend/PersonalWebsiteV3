@@ -24,6 +24,7 @@
     <div class="wrapper-large">
         <packages-section
             packages_fields='{!! json_encode($packages_fields) !!}'
+            allPackages='{!! json_encode($packages) !!}'
         ></packages-section>
     </div>
 @endsection
