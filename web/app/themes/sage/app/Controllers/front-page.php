@@ -9,19 +9,52 @@ use Sober\Controller\Controller;
 
 class FrontPage extends Controller
 {
+    // Main Sections Fields
+
     public function landingFields()
     {
         return (object) [
             'logo' => get_field('logo'),
-            'name' => get_field('name'),
-            'slug' => get_field('slug'),
-            'slug_ending_1' => get_field('slug_ending_1'),
-            'slug_ending_2' => get_field('slug_ending_2'),
-            'slug_ending_3' => get_field('slug_ending_3'),
-            'button_text' => get_field('button_text'),
-            'bottom_text' => get_field('bottom_text')
+            'name' => esc_html(get_field('name')),
+            'slug' => esc_html(get_field('slug')),
+            'slug_ending_1' =>  esc_html(get_field('slug_ending_1')),
+            'slug_ending_2' =>  esc_html(get_field('slug_ending_2')),
+            'slug_ending_3' =>  esc_html(get_field('slug_ending_3')),
+            'button_text' =>  esc_html(get_field('button_text')),
+            'bottom_text' =>  esc_html(get_field('bottom_text'))
         ];
     }
+    public function workFields()
+    {
+        return (object) [
+            'title' => esc_html(get_field('work_title'))
+        ];
+    }
+    public function testimonialsFields()
+    {
+        return (object) [
+            'title' => esc_html(get_field('title'))
+        ];
+    }
+    public function aboutFields()
+    {
+        return (object) [
+            'heading' => esc_html(get_field('about_title')),
+            'content' => esc_html(get_field('about_content')),
+            'image' => get_field('about_image')
+        ];
+    }
+    public function packagesSection()
+    {
+        return (object) [
+            'title' => esc_html(get_field('packages_tilte')),
+            'subtitle' => esc_html(get_field('packages_subtitle'))
+        ];
+    }
+
+
+
+    // Custom Post Types Fields
 
     public function projects()
     {
@@ -74,13 +107,5 @@ class FrontPage extends Controller
             wp_reset_postdata();
         }
         return $testimonials;
-    }
-    public function aboutFields()
-    {
-        return (object) [
-            'heading' => esc_html(get_field('about_title')),
-            'content' => esc_html(get_field('about_content')),
-            'image' => get_field('about_image')
-        ];
     }
 }
