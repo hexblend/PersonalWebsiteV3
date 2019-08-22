@@ -1,7 +1,7 @@
 <template>
     <section class="packages" id="packages">
-        <h3 class="packages__heading">Let's collaborate!</h3>
-        <p class="packages__subheading">Have an idea for a project? Check out my services and get in touch</p>
+        <h3 class="packages__heading">{{ fields.title }}</h3>
+        <p class="packages__subheading">{{ fields.subtitle }}</p>
         <div class="packages__wrapper">
             <single-package></single-package>
         </div>
@@ -13,5 +13,13 @@
     export default {
         name: 'packages-section',
         components: {SinglePackage},
+        data(){
+            return {
+                fields: JSON.parse(this.packages_fields)
+            }
+        },
+        props: {
+            packages_fields: String
+        }
     }
 </script>
