@@ -12,6 +12,7 @@ import ProjectsSection from "./components/sections/ProjectsSection"
 import TestimonialsSection from "./components/sections/TestimonialsSection"
 import AboutSection from "./components/sections/AboutSection"
 import PackagesSection from "./components/sections/PackagesSection"
+import ContactSection from "./components/Sections/ContactSection";
 
 const app = new Vue({
     el: "#app",
@@ -20,6 +21,7 @@ const app = new Vue({
         ProjectsSection,
         TestimonialsSection,
         AboutSection,
-        PackagesSection
+        PackagesSection,
+        ContactSection
     }
 })

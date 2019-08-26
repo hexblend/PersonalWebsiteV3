@@ -26,5 +26,7 @@
             packages_fields='{!! json_encode($packages_fields) !!}'
             allPackages='{!! json_encode($packages) !!}'
         ></packages-section>
+
+        <contact-section></contact-section>
     </div>
 @endsection
