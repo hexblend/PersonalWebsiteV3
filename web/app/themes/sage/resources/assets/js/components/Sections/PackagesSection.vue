@@ -3,7 +3,11 @@
         <h3 class="packages__heading">{{ fields.title }}</h3>
         <p class="packages__subheading">{{ fields.subtitle }}</p>
         <div class="packages__wrapper">
-            <single-package v-for="(spackage, index) in packages" :key="index" :spackage="spackage"></single-package>
+            <single-package
+                v-for="(spackage, index) in packages"
+                :key="index"
+                :spackage="spackage"
+            ></single-package>
         </div>
     </section>
 </template>
@@ -22,9 +26,6 @@
         props: {
             packages_fields: String,
             allpackages: String
-        },
-        mounted(){
-            console.log();
         }
     }
 </script>

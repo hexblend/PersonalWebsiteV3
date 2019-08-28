@@ -19,6 +19,7 @@
 </template>
 
 <script>
+    import { EventBus } from '../event-bus.js';
     export default {
         name: 'contact-section',
         props: {
@@ -29,7 +30,14 @@
             return {
                 fields: JSON.parse(this.contact_fields),
                 links: JSON.parse(this.alllinks),
+                selected_package: ''
             }
+        },
+        mounted() {
+            EventBus.$on('get-package-title', title => {
+               this.selected_package = title;
+               console.log('Selected package: ' + this.selected_package);
+            });
         }
     }
 </script>

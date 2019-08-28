@@ -17,15 +17,21 @@
                 </div>
             </div>
         </div>
-        <a href="#contact" class="single-package__button btn btn-filled">{{ spackage.button_text }}</a>
+        <a href="#contact" class="single-package__button btn btn-filled" @click="getPackageTitle(spackage.title)">{{ spackage.button_text }}</a>
     </div>
 </template>
 
 <script>
+    import { EventBus } from './event-bus.js';
     export default {
         name: 'single-package',
         props: {
             spackage: Object
         },
+        methods: {
+            getPackageTitle: function(title) {
+                EventBus.$emit('get-package-title', title);
+            }
+        }
     }
 </script>
