@@ -8,25 +8,14 @@
             <div class="contact__information--links">
                 <h3 class="contact__information--links__heading">{{ fields.social_media_title }}</h3>
 
-                <div class="contact__information--links__row">
-                    <p class="contact__information--links__row--service">Twitter:</p>
-                    <a class="contact__information--links__row--link" href="http://twitter.com/vladbbr">twitter.com/vladbbr</a>
+                <div v-for="(link, index) in links" :key="index" class="contact__information--links__row">
+                    <p class="contact__information--links__row--service">{{ link.title + ':' }}</p>
+                    <a v-if="link.URL" class="contact__information--links__row--link" :href="link.URL">{{ link.link_body }}</a>
+                    <a v-else-if="link.phone" class="contact__information--links__row--link" :href="'tel:' + link.phone">{{ link.link_body }}</a>
+                    <a v-else="link.email" class="contact__information--links__row--link" :href="'mailto:' + link.email">{{ link.link_body }}</a>
                 </div>
 
-                <div class="contact__information--links__row">
-                    <p class="contact__information--links__row--service">LinkedIn:</p>
-                    <a class="contact__information--links__row--link" href="http://twitter.com/vladbbr">linkedin.com/in/vladbbr</a>
-                </div>
 
-                <div class="contact__information--links__row">
-                    <p class="contact__information--links__row--service">Github:</p>
-                    <a class="contact__information--links__row--link" href="http://twitter.com/vladbbr">github.com/vladbbr</a>
-                </div>
-
-                <div class="contact__information--links__row">
-                    <p class="contact__information--links__row--service">Email:</p>
-                    <a class="contact__information--links__row--link" href="http://twitter.com/vladbbr">vladbbr1@gmail.com</a>
-                </div>
             </div>
         </div>
     </section>
@@ -36,15 +25,17 @@
     export default {
         name: 'contact-section',
         props: {
-            contact_fields: String
+            contact_fields: String,
+            alllinks: String
         },
         data(){
             return {
-                fields: JSON.parse(this.contact_fields)
+                fields: JSON.parse(this.contact_fields),
+                links: JSON.parse(this.alllinks),
             }
         },
-        mounted(){
-            console.log(this.fields);
+        mounted() {
+            console.log(this.links);
         }
     }
 </script>
