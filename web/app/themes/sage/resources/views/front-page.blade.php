@@ -29,6 +29,7 @@
 
         <contact-section
             contact_fields='{!! json_encode($contact_fields) !!}'
+            allLinks='{!! json_encode($social_media_links) !!}'
         ></contact-section>
     </div>
 @endsection
