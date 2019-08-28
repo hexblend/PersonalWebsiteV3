@@ -48,6 +48,7 @@ class FrontPage extends Controller
     public function packagesFields()
     {
         return (object) [
+            'show_section' => get_field_object('packages_show_section'),
             'title' => esc_html(get_field('packages_title')),
             'subtitle' => esc_html(get_field('packages_description'))
         ];

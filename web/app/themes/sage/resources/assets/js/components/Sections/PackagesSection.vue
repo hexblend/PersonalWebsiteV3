@@ -1,5 +1,5 @@
 <template>
-    <section class="packages" id="packages">
+    <section class="packages" id="packages" v-if="fields.show_section['value'] === 'Yes'">
         <h3 class="packages__heading">{{ fields.title }}</h3>
         <p class="packages__subheading">{{ fields.subtitle }}</p>
         <div class="packages__wrapper">
@@ -22,6 +22,9 @@
         props: {
             packages_fields: String,
             allpackages: String
+        },
+        mounted(){
+            console.log();
         }
     }
 </script>
