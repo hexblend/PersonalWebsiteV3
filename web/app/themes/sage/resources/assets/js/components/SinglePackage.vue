@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <a href="#about" class="single-package__button btn btn-filled">{{ spackage.button_text }}</a>
+        <a href="#contact" class="single-package__button btn btn-filled">{{ spackage.button_text }}</a>
     </div>
 </template>
 

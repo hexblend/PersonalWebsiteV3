@@ -53,4 +53,8 @@
     border-top-left-radius: 0;
     padding: rem(0 16px);
     flex: 1;
+    @include transition();
+    &:hover {
+        margin: rem(0 0 0 -16px);
+    }
 }
