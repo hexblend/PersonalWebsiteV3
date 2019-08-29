@@ -21,7 +21,7 @@
   @include screen-lt($bp-large-2) {
     justify-content: center;
   }
-  @include screen-lt($bp-medium) {
+  @include screen-lt($bp-large) {
     margin-top: rem(16px);
   }
 }
