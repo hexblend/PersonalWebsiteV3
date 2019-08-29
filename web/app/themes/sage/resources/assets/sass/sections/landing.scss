@@ -33,7 +33,12 @@
 .landing__central-elements {
   text-align: center;
   min-width: 100%;
+  padding-bottom: rem(calc(8px + 24px)); // Button compensation + footer text margin
+  @include screen-lt(350px) {
+     padding-bottom: rem(8px);
+   }
 }
+
 .landing__central-elements--logo {
   background-repeat: no-repeat;
   background-position: center center;
@@ -43,7 +48,17 @@
   height: rem(160px);
   position: inherit;
   margin-bottom: rem(16px);
+  @include mix-md-tablet {
+    width: rem(130px);
+    height: rem(130px);
+    margin-bottom: rem(24px);
+  }
+  @include screen-lt(450px){
+    width: rem(120px);
+    height: rem(120px);
+  }
 }
+
 .landing__central-elements--title {
   color: $c-white;
   font-weight: $fw-extraLight;
@@ -51,13 +66,38 @@
   font-size: rem(72px);
   letter-spacing: $ls-bigDistance;
   line-height: 1.25;
+  @include mix-md-tablet {
+    font-size: rem(56px);
+    letter-spacing: $ls-smallDistance;
+  }
+  @include screen-lt(600px) {
+    font-size: rem(40px);
+  }
 }
+
 .landing__central-elements--slug {
   color: $c-white;
   font-weight: $fw-extraLight;
   letter-spacing: $ls-smallDistance;
   margin-bottom: rem(40px);
+  @include mix-md-tablet {
+    font-size: $h-2-tablet;
+    margin-bottom: rem(32px);
+  }
+  @include screen-lt(600px) {
+    font-size: $h-2-mobile
+  }
+  @include screen-lt(450px) {
+    display: block;
+    margin: rem(8px auto 40px auto);
+    max-width: rem(280px);
+  }
+  @include screen-lt(350px) {
+    margin-bottom: rem(32px);
+    max-width: rem(178px);
+  }
 }
+
 .vue-typer {
   .custom.char {
     color: $c-white;
@@ -68,10 +108,22 @@
     background: $c-white;
   }
 }
+
+.landing__central-elements--button {
+  @include screen-lt(600px) {
+    font-size: $txt-regular-mobile;
+    padding: rem(8px 32px);
+  }
+}
+
 .landing__footer {
   position: absolute;
-  bottom: rem(30px);
+  bottom: rem(24px);
   color: $c-white;
   font-weight: $fw-light;
+  text-align: center;
+  @include screen-lt(350px) {
+    display: none;
+  }
 }
 
