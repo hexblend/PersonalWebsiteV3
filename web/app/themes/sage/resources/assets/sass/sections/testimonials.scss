@@ -1,8 +1,9 @@
 .testimonials__heading {
   display: flex;
   justify-content: flex-end;
-  @include screen-lt($bp-large) {
+  @include screen-lt($bp-large-2) {
     justify-content: center;
+    margin-bottom: 0;
   }
 }
 .testimonials__heading--text {
@@ -11,8 +12,8 @@
 .testimonial__carousel--blockquote {
   margin-top: rem(68px);
   position: relative;
-  @include screen-lt($bp-large) {
-    margin-top: rem(32px);
+  @include screen-lt($bp-large-2) {
+    margin-top: rem(40px);
   }
 }
 .testimonial__carousel--quote {
