@@ -18,14 +18,6 @@
   font-family: $f-primary;
   font-weight: $fw-extraLight;
 }
-@mixin font-secondary-medium() {
-    font-family: $f-secondary;
-    font-weight: $fw-medium;
-}
-@mixin font-secondary-regular() {
-    font-family: $f-secondary;
-    font-weight: $fw-regular;
-}
 @mixin text-gradient(){
     background: $c-main-gradient-reversed;
     -webkit-background-clip: text;
@@ -45,12 +37,6 @@
     background: linear-gradient(90deg, $c-blue 40%, $c-teal 60%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-      font-family: $f-secondary;
-    font-weight: $fw-medium;
-}
-@mixin font-secondary-regular() {
-  font-family: $f-secondary;
-  font-weight: $fw-regular;
 }
 @mixin text-gradient(){
   background: $c-main-gradient-reversed;
