@@ -9,7 +9,7 @@
     &:first-child {
         margin-top: 0;
     }
-    @include screen-lt($bp-large-2) {
+    @include screen-lt($bp-extra-large) {
         flex-direction: column;
         padding: rem(32px);
         padding-bottom: rem(16px);
@@ -37,7 +37,7 @@
     justify-content: center;
     width: 25%;
     margin-right: rem(40px);
-    @include screen-lt($bp-large-2) {
+    @include screen-lt($bp-extra-large) {
         width: 100%;
         text-align: center;
     }
@@ -62,7 +62,7 @@
     padding: rem(32px 0);
     width: 55%;
     margin-right: rem(16px);
-    @include screen-lt($bp-large-2) {
+    @include screen-lt($bp-extra-large) {
         width: 100%;
         flex-direction: column;
         align-items: flex-start;
@@ -76,7 +76,7 @@
 }
 .single-package__description--column1 {
     margin-right: rem(24px);
-    @include screen-lt($bp-large-2) {
+    @include screen-lt($bp-extra-large) {
         margin-right: 0;
     }
 }
@@ -94,7 +94,7 @@
 .single-package__description--column1 p,
 .single-package__description--column2 p {
     margin-bottom: rem(5px);
-    @include screen-lt($bp-large-2) {
+    @include screen-lt($bp-extra-large) {
         margin-bottom: 0;
         line-height: 1.6;
     }
@@ -112,15 +112,22 @@
     &:hover {
         margin: rem(0 0 0 -16px);
     }
-    @include screen-lt($bp-large-2) {
+    @include screen-lt($bp-extra-large) {
         flex: none;
-        border-radius: 8px;
-        align-self: center;
-        padding: rem(8px 24px);
-        font-weight: $fw-regular;
+        background: $c-main-gradient;
+        padding: rem(8px 48px 6px 48px);
+        font-size: $p-small;
+        border-radius: rem(8px);
+        @include transition();
         &:hover {
             margin: 0;
             transform: scale(1.085);
+        }
+        @include screen-lt($bp-large) {
+            font-size: $p-small-tablet;
+        }
+        @include screen-lt($bp-small) {
+            font-size: $p-small-mobile;
         }
     }
 }

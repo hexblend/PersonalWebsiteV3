@@ -1,5 +1,6 @@
 .contact {
-    margin-top: rem(72px);
+    margin-top: rem(36px); // The rest of 36 is from packages
+    padding-bottom: rem(40px); // Remove this after having a footer
 }
 .contact__heading {
     @include section-heading-center;
@@ -11,26 +12,54 @@
     display: block;
     margin: 0 auto;
     margin-bottom: rem(72px);
+    @include screen-lt($bp-large) {
+        margin-bottom: rem(36px);
+    }
 }
 .contact__information {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+    @include screen-lt($bp-extra-large) {
+        flex-direction: column;
+    }
+}
+.contact__information--form {
+    @include screen-lt($bp-extra-large) {
+        align-self: center;
+    }
+    @include screen-lt($bp-medium) {
+        width: 100%;
+    }
 }
 .contact__information--form__columns {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include screen-lt($bp-medium) {
+        flex-direction: column;
+    }
     div {
-        &:first-child{
-            margin-right: rem(32px);
+            &:first-child{
+                margin-right: rem(32px);
+                @include screen-lt($bp-medium) {
+                    margin-right: 0;
+                }
+            }
+            p{
+                margin-bottom: rem(16px);
+            }
+            input, select{
+                margin-top: rem(4px);
+            }
+            @include screen-lt($bp-medium) {
+                width: 100%;
+            }
         }
-        p{
-            margin-bottom: rem(16px);
-        }
-        input, select{
-            margin-top: rem(4px);
-        }
+}
+.contact__information--links {
+    @include screen-lt($bp-extra-large) {
+        align-self: center;
     }
 }
 .contact__information--links__heading {
@@ -38,6 +67,10 @@
     text-transform: lowercase;
     display: block;
     margin-bottom: rem(32px);
+    @include screen-lt($bp-extra-large) {
+        @include section-heading-center;
+        margin-bottom: rem(24px);
+    }
 }
 .contact__information--links__row {
     display: flex;
