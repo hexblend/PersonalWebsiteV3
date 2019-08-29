@@ -1,12 +1,22 @@
 .projects {
   padding-bottom: rem(100px);
+  @include screen-lt($bp-medium) {
+    padding-bottom: rem(32px);
+  }
 }
 .projects__heading{
-  @include section-heading()
+  @include section-heading();
+  @include screen-lt($bp-large-2) {
+    @include section-heading-center;
+  }
 }
 .projects__previews-wrapper {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   margin-top: rem(32px);
+  @include screen-lt($bp-large-2) {
+    justify-content: center;
+    margin-top: rem(16px);
+  }
 }
