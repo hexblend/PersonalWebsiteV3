@@ -5,7 +5,7 @@
   @include screen-lt($bp-large-2) {
     padding: rem(72px 36px);
   }
-  @include screen-lt($bp-large-2) {
+  @include screen-lt($bp-medium) {
     padding: rem(40px 8px);
   }
 }
