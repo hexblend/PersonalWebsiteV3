@@ -1,5 +1,8 @@
 .packages {
     margin-top: rem(72px);
+    @include screen-lt($bp-medium) {
+        margin-top: rem(40px);
+    }
 }
 .packages__heading {
     @include section-heading-center;
@@ -10,4 +13,10 @@
 }
 .packages__wrapper {
     margin-top: rem(56px);
+    @include screen-lt($bp-large-2) {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
 }
