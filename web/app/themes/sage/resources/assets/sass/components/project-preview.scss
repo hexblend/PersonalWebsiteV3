@@ -1,18 +1,12 @@
 .project-preview {
-  width: 280px;
-  height: 280px;
+  width: rem(280px);
+  height: rem(280px);
   background: url("../img/project-preview-default.jpg") no-repeat center center;
   background-size: 120%;
   border-radius: rem(20px);
   margin: rem(15px);
   position: relative;
   @include transition();
-  &:nth-child(3n+1) {
-    margin-left: 0;
-  }
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
   &:hover {
     border-radius: 0;
     border-top-right-radius: rem(20px);
@@ -30,6 +24,25 @@
     border-radius: 0;
     border-bottom-left-radius: rem(20px);
     border-bottom-right-radius: rem(20px);
+    @include screen-lt($bp-large) {
+      top: rem(250px);
+    }
+  }
+  @include screen-gt($bp-large-2) {
+    &:nth-child(3n+1) {
+      margin-left: 0;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  @include screen-lt($bp-large) {
+    width: rem(250px);
+    height: rem(250px);
+    max-width: 100%;
+  }
+  @include screen-lt($bp-small) {
+    margin: rem(16px 0);
   }
 }
 .project-preview__info {
