@@ -78,9 +78,4 @@
   @include screen-lt($bp-large-2) {
     margin-top: 0 !important;
   }
-  button {
-    @include screen-lt($bp-large-2) {
-      margin-top: 0 !important;
-    }
-  }
 }
