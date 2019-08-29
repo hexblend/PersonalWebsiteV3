@@ -66,4 +66,10 @@ input[type="submit"] {
     &:hover {
         transform: scale(1.085);
     }
+    @include screen-lt($bp-large) {
+        font-size: $p-small-tablet;
+    }
+    @include screen-lt($bp-small) {
+        font-size: $p-small-mobile;
+    }
 }

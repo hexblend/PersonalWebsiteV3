@@ -13,7 +13,7 @@
 }
 .packages__wrapper {
     margin-top: rem(56px);
-    @include screen-lt($bp-large-2) {
+    @include screen-lt($bp-extra-large) {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;

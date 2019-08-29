@@ -3,7 +3,7 @@
   font-family: $f-primary;
   cursor: pointer;
   text-align: center;
-  font-size: $txt-regular;
+  font-size: $p-small;
   @include transition();
   &:active {
     transform: scale(0.99);
@@ -15,10 +15,10 @@
     }
   }
   @include screen-lt($bp-large) {
-    font-size: $txt-small-tablet;
+    font-size: $p-small-tablet;
   }
   @include screen-lt($bp-small) {
-    font-size: $txt-small-mobile;
+    font-size: $p-small-mobile;
   }
 }
 
