@@ -30,11 +30,12 @@
   opacity: 0.8;
   z-index: -9;
 }
+
 .landing__central-elements {
   text-align: center;
   min-width: 100%;
   padding-bottom: rem(calc(8px + 24px)); // Button compensation + footer text margin
-  @include screen-lt(350px) {
+  @include screen-lt($bp-extra-small) {
      padding-bottom: rem(8px);
    }
 }
@@ -53,7 +54,7 @@
     height: rem(130px);
     margin-bottom: rem(24px);
   }
-  @include screen-lt(450px){
+  @include screen-lt($bp-small){
     width: rem(120px);
     height: rem(120px);
   }
@@ -70,7 +71,7 @@
     font-size: rem(56px);
     letter-spacing: $ls-smallDistance;
   }
-  @include screen-lt(600px) {
+  @include screen-lt($bp-medium) {
     font-size: rem(40px);
   }
 }
@@ -84,15 +85,15 @@
     font-size: $h-2-tablet;
     margin-bottom: rem(32px);
   }
-  @include screen-lt(600px) {
+  @include screen-lt($bp-medium) {
     font-size: $h-2-mobile
   }
-  @include screen-lt(450px) {
+  @include screen-lt($bp-small) {
     display: block;
     margin: rem(8px auto 40px auto);
     max-width: rem(280px);
   }
-  @include screen-lt(350px) {
+  @include screen-lt($bp-extra-small) {
     margin-bottom: rem(32px);
     max-width: rem(178px);
   }
@@ -110,7 +111,7 @@
 }
 
 .landing__central-elements--button {
-  @include screen-lt(600px) {
+  @include screen-lt($bp-medium) {
     font-size: $txt-regular-mobile;
     padding: rem(8px 32px);
   }
@@ -122,7 +123,7 @@
   color: $c-white;
   font-weight: $fw-light;
   text-align: center;
-  @include screen-lt(350px) {
+  @include screen-lt($bp-small) {
     display: none;
   }
 }
