@@ -9,19 +9,61 @@ use Sober\Controller\Controller;
 
 class FrontPage extends Controller
 {
+
+    // Main Sections Fields
+
     public function landingFields()
     {
         return (object) [
             'logo' => get_field('logo'),
-            'name' => get_field('name'),
-            'slug' => get_field('slug'),
-            'slug_ending_1' => get_field('slug_ending_1'),
-            'slug_ending_2' => get_field('slug_ending_2'),
-            'slug_ending_3' => get_field('slug_ending_3'),
-            'button_text' => get_field('button_text'),
-            'bottom_text' => get_field('bottom_text')
+            'name' => esc_html(get_field('name')),
+            'slug' => esc_html(get_field('slug')),
+            'slug_ending_1' =>  esc_html(get_field('slug_ending_1')),
+            'slug_ending_2' =>  esc_html(get_field('slug_ending_2')),
+            'slug_ending_3' =>  esc_html(get_field('slug_ending_3')),
+            'button_text' =>  esc_html(get_field('button_text')),
+            'bottom_text' =>  esc_html(get_field('bottom_text'))
         ];
     }
+    public function workFields()
+    {
+        return (object) [
+            'title' => esc_html(get_field('work_title'))
+        ];
+    }
+    public function testimonialsFields()
+    {
+        return (object) [
+            'title' => esc_html(get_field('testimonials_title'))
+        ];
+    }
+    public function aboutFields()
+    {
+        return (object) [
+            'heading' => esc_html(get_field('about_title')),
+            'content' => esc_html(get_field('about_content')),
+            'image' => get_field('about_image')
+        ];
+    }
+    public function packagesFields()
+    {
+        return (object) [
+            'show_section' => get_field_object('packages_show_section'),
+            'title' => esc_html(get_field('packages_title')),
+            'subtitle' => esc_html(get_field('packages_description'))
+        ];
+    }
+    public function contactFields()
+    {
+        return (object) [
+            'title' => esc_html(get_field('contact_title')),
+            'subtitle' => esc_html(get_field('contact_subtitle')),
+            'form' => get_field('contact_form'),
+            'social_media_title' => esc_html(get_field('contact_social_media_title'))
+        ];
+    }
+
+        // Custom Post Types Fields
 
     public function projects()
     {
@@ -75,12 +117,53 @@ class FrontPage extends Controller
         }
         return $testimonials;
     }
-    public function aboutFields()
+    public function packages()
     {
-        return (object) [
-            'heading' => esc_html(get_field('about_title')),
-            'content' => esc_html(get_field('about_content')),
-            'image' => get_field('about_image')
+        $packages = [];
+        $args = [
+            'posts_per_page' => -1,
+            'post_type' => 'package',
+            'order_by' => 'DATE',
+            'order' => 'ASC'
         ];
+        $the_query = new \WP_Query($args);
+        if ($the_query->post_count > 0) {
+            $packages = array_map(function ($package) {
+                return (object)[
+                    'title' => esc_html(get_the_title($package)),
+                    'subtitle' => esc_html(get_field('package_subtitle', $package)),
+                    'description_title' => esc_html(get_field('package_description_title', $package)),
+                    'description_column_1' => esc_html(get_field('package_description_column_1', $package)),
+                    'description_column_2' => esc_html(get_field('package_description_column_2', $package)),
+                    'button_text' => esc_html(get_field('package_button_text', $package))
+                ];
+            }, $the_query->posts);
+            wp_reset_postdata();
+        }
+        return $packages;
+    }
+    public function social_media_links()
+    {
+        $links = [];
+            $args = [
+                'posts_per_page' => -1,
+                'order_by' => 'DATE',
+                'order' => 'ASC',
+                'post_type' => 'social_media'
+            ];
+            $the_query = new \WP_Query($args);
+            if ($the_query->post_count > 0) {
+                $links = array_map(function ($link){
+                    return (object) [
+                        'title' => esc_html(get_the_title($link)),
+                        'link_body' => esc_html(get_field('social_media_link_body', $link)),
+                        'URL' => esc_html(get_field('social_media_link_url', $link)),
+                        'email' => esc_html(get_field('social_media_link_email', $link)),
+                        'phone' => esc_html(get_field('social_media_link_phone', $link))
+                    ];
+                }, $the_query->posts);
+                wp_reset_postdata();
+            }
+        return $links;
     }
 }

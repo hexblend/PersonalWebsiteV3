@@ -1,16 +1,75 @@
 label {
-  font-family: $f-primary;
-  font-weight: normal;
-  font-size: rem(16px);
-  line-height: 1.5;
-  color: $c-dark-blue;
+    font-family: $f-primary;
+    font-weight: normal;
+    font-size: rem(16px);
+    line-height: 1.5;
+    color: $c-black;
 
-  &.required {
-    &:after {
-      content: '*';
-      position: absolute;
-      color: $c-dark-blue;
-      top: rem(3px);
+    em {
+        color: $c-dark-blue;
+        font-size: $h-5;
+        font-style: normal;
+        margin-left: rem(2px);
     }
-  }
+}
+input[type=text],
+input[type=email],
+input[type=tel],
+select {
+    background: $c-light-grey;
+    padding: rem(8px 12px);
+    color: $c-darkest-grey;
+    border-radius: rem(8px);
+    line-height: 1.55;
+    width: 100%;
+    border: 1px solid $c-light-grey;
+    @include transition();
+    &:focus {
+        color: $c-black;
+        border: 1px solid $c-light-blue;
+    }
+}
+select {
+    position: relative;
+    background: $c-light-grey url(../img/caret-down.svg) no-repeat;
+    background-position: right rem(10px) bottom rem(18px);
+    background-size: rem(18px 10px);
+    cursor: pointer;
+    height: rem(48px);
+}
+textarea {
+    background: $c-light-grey;
+    padding: rem(10px 14px);
+    border-radius: rem(8px);
+    color: $c-darkest-grey;
+    resize: none;
+    width: 100%;
+    height: 150px;
+    margin-top: rem(4px);
+    border: 1px solid $c-light-grey;
+    &:focus {
+        color: $c-black;
+        border: 1px solid $c-light-blue;
+    }
+}
+input[type="submit"] {
+    text-align: center;
+    background: $c-main-gradient;
+    padding: rem(8px 48px 6px 48px);
+    color: $c-white;
+    font-weight: $fw-regular;
+    font-size: $p-small;
+    border-radius: rem(8px);
+    margin: rem(32px) auto;
+    display: block;
+    @include transition();
+    &:hover {
+        transform: scale(1.085);
+    }
+    @include screen-lt($bp-large) {
+        font-size: $p-small-tablet;
+    }
+    @include screen-lt($bp-small) {
+        font-size: $p-small-mobile;
+    }
 }

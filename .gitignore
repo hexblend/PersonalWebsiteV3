@@ -27,3 +27,4 @@ wp-cli.local.yml
 web/app/themes/sage/node_modules
 web/app/themes/sage/vendor
 web/app/themes/sage/dist
+.DS_Store

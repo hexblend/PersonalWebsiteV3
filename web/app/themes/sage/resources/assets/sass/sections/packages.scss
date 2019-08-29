@@ -1,0 +1,25 @@
+.packages {
+    margin-top: rem(72px);
+    @include screen-lt($bp-medium) {
+        margin-top: rem(40px);
+    }
+}
+.packages__heading {
+    @include section-heading-center;
+}
+.packages__subheading {
+    font-size: $h-5;
+    text-align: center;
+}
+.packages__wrapper {
+    margin-top: rem(54px);
+    @include screen-lt($bp-extra-large) {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    @include screen-lt($bp-medium) {
+        margin-top: rem(32px);
+    }
+}

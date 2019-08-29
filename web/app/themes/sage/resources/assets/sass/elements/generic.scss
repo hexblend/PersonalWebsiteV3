@@ -1,0 +1,8 @@
+body {
+  @include mix-md-tablet {
+    max-width: 100vw;
+  }
+}
+section {
+  max-width: 100vw;
+}

@@ -1,6 +1,10 @@
 .testimonials__heading {
   display: flex;
   justify-content: flex-end;
+  @include screen-lt($bp-large-2) {
+    justify-content: center;
+    margin-bottom: 0;
+  }
 }
 .testimonials__heading--text {
   @include section-heading;
@@ -8,6 +12,9 @@
 .testimonial__carousel--blockquote {
   margin-top: rem(68px);
   position: relative;
+  @include screen-lt($bp-large-2) {
+    margin-top: rem(40px);
+  }
 }
 .testimonial__carousel--quote {
   text-align: center;
@@ -17,12 +24,24 @@
   color: $c-dark-grey;
   margin-bottom: rem(32px);
   padding: rem(10px 0);
+  @include screen-lt($bp-large) {
+    font-size: $h-4-tablet;
+  }
+  @include screen-lt($bp-small) {
+    font-size: $h-4-mobile;
+  }
 }
 .testimonial__carousel--author {
   text-align: center;
   font-weight: $fw-bold;
   font-size: $h-5;
   line-height: normal;
+  @include screen-lt($bp-large) {
+    font-size: $h-5-tablet;
+  }
+  @include screen-lt($bp-small) {
+    font-size: $h-5-mobile;
+  }
 }
 .testimonial__carousel--position {
   text-align: center;
@@ -36,12 +55,28 @@
   font-size: rem(180px);
   line-height: rem(50px);
   color: $c-light-grey;
+  @include screen-lt($bp-large) {
+    font-size: rem(150px);
+    line-height: 40px;
+  }
 }
 .testimonial__carousel--endingQuotes {
   position: absolute;
   bottom: 0;
   right: 0;
   font-size: rem(180px);
-  line-height: rem(40px);
+  line-height: rem(50px);
   color: $c-light-grey;
+  @include screen-lt($bp-large) {
+    font-size: rem(150px);
+    line-height: rem(30px);
+  }
+  @include screen-lt($bp-small) {
+    line-height: rem(20px);
+  }
+}
+.VueCarousel-dot-container {
+  @include screen-lt($bp-large-2) {
+    margin-top: 0 !important;
+  }
 }

@@ -1,0 +1,99 @@
+.contact {
+    margin-top: rem(72px); // The rest of 36 is from packages
+    @include screen-lt($bp-extra-large) {
+        margin-top: rem(36px);
+    }
+    @include screen-lt($bp-medium) {
+        margin-bottom: rem(24px);
+    }
+    padding-bottom: rem(40px); // Remove this after adding a footer
+}
+.contact__heading {
+    @include section-heading-center;
+    margin-bottom: rem(8px);
+}
+.contact__subheading {
+    max-width: rem(680px);
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: rem(72px);
+    @include screen-lt($bp-large) {
+        margin-bottom: rem(32px);
+    }
+}
+.contact__information {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    @include screen-lt($bp-extra-large) {
+        flex-direction: column;
+    }
+}
+.contact__information--form {
+    @include screen-lt($bp-extra-large) {
+        align-self: center;
+    }
+    @include screen-lt($bp-medium) {
+        width: 100%;
+    }
+}
+.contact__information--form__columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include screen-lt($bp-medium) {
+        flex-direction: column;
+    }
+    div {
+            &:first-child{
+                margin-right: rem(32px);
+                @include screen-lt($bp-medium) {
+                    margin-right: 0;
+                }
+            }
+            p{
+                margin-bottom: rem(16px);
+            }
+            input, select{
+                margin-top: rem(4px);
+            }
+            @include screen-lt($bp-medium) {
+                width: 100%;
+            }
+        }
+}
+.contact__information--links {
+    @include screen-lt($bp-extra-large) {
+        align-self: center;
+    }
+}
+.contact__information--links__heading {
+    @include section-heading;
+    text-transform: lowercase;
+    display: block;
+    margin-bottom: rem(32px);
+    @include screen-lt($bp-extra-large) {
+        @include section-heading-center;
+        margin-bottom: rem(24px);
+    }
+}
+.contact__information--links__row {
+    display: flex;
+    margin-bottom: rem(12px);
+}
+.contact__information--links__row--service {
+    font-weight: $fw-bold;
+    letter-spacing: $ls-closeLetters;
+    margin-right: rem(8px);
+    font-size: $p-small;
+}
+.contact__information--links__row--link {
+    color: $c-dark-blue;
+    border-bottom: 1px solid $c-blue;
+    line-height: 1.4;
+    &:hover {
+        color: $c-light-blue;
+        border-bottom: 1px solid $c-light-blue;
+    }
+}

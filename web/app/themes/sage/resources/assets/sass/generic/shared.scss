@@ -1,9 +1,25 @@
-.site-wrapper {
-  margin: 0 auto;
-  max-width: rem(1200px);
-}
-.wrapper {
+.wrapper-small {
   margin: 0 auto;
   padding: rem(72px 110px);
-  max-width: 1200px;
+  max-width: rem(1200px);
+  @include screen-lt($bp-large-2) {
+    padding: rem(72px 36px);
+  }
+  @include screen-lt($bp-large) {
+    padding: rem(72px 16px);
+  }
+  @include screen-lt($bp-medium) {
+    padding: rem(40px 8px);
+  }
+}
+.wrapper-large {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 55px;
+    @include screen-lt($bp-large) {
+      padding: rem(0 16px);
+    }
+    @include screen-lt($bp-medium) {
+      padding: rem(0 8px);
+    }
 }
