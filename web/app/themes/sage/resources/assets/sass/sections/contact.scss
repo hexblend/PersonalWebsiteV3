@@ -1,6 +1,12 @@
 .contact {
-    margin-top: rem(36px); // The rest of 36 is from packages
-    padding-bottom: rem(40px); // Remove this after having a footer
+    margin-top: rem(72px); // The rest of 36 is from packages
+    @include screen-lt($bp-extra-large) {
+        margin-top: rem(36px);
+    }
+    @include screen-lt($bp-medium) {
+        margin-bottom: rem(24px);
+    }
+    padding-bottom: rem(40px); // Remove this after adding a footer
 }
 .contact__heading {
     @include section-heading-center;
@@ -13,7 +19,7 @@
     margin: 0 auto;
     margin-bottom: rem(72px);
     @include screen-lt($bp-large) {
-        margin-bottom: rem(36px);
+        margin-bottom: rem(32px);
     }
 }
 .contact__information {
