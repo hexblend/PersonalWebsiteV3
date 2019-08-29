@@ -1,7 +1,13 @@
 .wrapper-small {
-    margin: 0 auto;
-    padding: rem(72px 110px);
-    max-width: rem(1200px);
+  margin: 0 auto;
+  padding: rem(72px 110px);
+  max-width: rem(1200px);
+  @include screen-lt($bp-large-2) {
+    padding: rem(72px 36px);
+  }
+  @include screen-lt($bp-large-2) {
+    padding: rem(40px 8px);
+  }
 }
 .wrapper-large {
     margin: 0 auto;
