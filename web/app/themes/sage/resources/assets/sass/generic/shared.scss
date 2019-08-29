@@ -16,4 +16,10 @@
     margin: 0 auto;
     max-width: 1440px;
     padding: 0 55px;
+    @include screen-lt($bp-large) {
+      padding: rem(0 16px);
+    }
+    @include screen-lt($bp-medium) {
+      padding: rem(0 8px);
+    }
 }

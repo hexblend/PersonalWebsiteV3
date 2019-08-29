@@ -3,23 +3,27 @@
   font-family: $f-primary;
   cursor: pointer;
   text-align: center;
+  font-size: $txt-regular;
   @include transition();
-
   &:active {
     transform: scale(0.99);
   }
-
   &:disabled {
     cursor: inherit;
     &:active {
       transform: scale(1);
     }
   }
+  @include screen-lt($bp-large) {
+    font-size: $txt-small-tablet;
+  }
+  @include screen-lt($bp-small) {
+    font-size: $txt-small-mobile;
+  }
 }
 
 .btn-ghost {
   background: rgba(0,0,0,0);
-  font-size: $txt-regular;
   width: 100%;
   padding: 8px 40px;
   color: $c-white;
@@ -42,5 +46,6 @@
 .btn-filled {
     background: $c-dark-gradient-reversed-upper;
     color: $c-white;
+    font-weight: $fw-regular;
 }
 
