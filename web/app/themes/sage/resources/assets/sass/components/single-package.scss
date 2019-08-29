@@ -114,13 +114,20 @@
     }
     @include screen-lt($bp-extra-large) {
         flex: none;
-        border-radius: 8px;
-        align-self: center;
-        padding: rem(8px 24px);
-        font-weight: $fw-regular;
+        background: $c-main-gradient;
+        padding: rem(8px 48px 6px 48px);
+        font-size: $p-small;
+        border-radius: rem(8px);
+        @include transition();
         &:hover {
             margin: 0;
             transform: scale(1.085);
+        }
+        @include screen-lt($bp-large) {
+            font-size: $p-small-tablet;
+        }
+        @include screen-lt($bp-small) {
+            font-size: $p-small-mobile;
         }
     }
 }
