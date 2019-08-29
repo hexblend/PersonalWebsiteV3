@@ -1,7 +1,10 @@
 .projects {
   padding-bottom: rem(100px);
-  @include screen-lt($bp-medium) {
-    padding-bottom: rem(32px);
+  @include screen-lt($bp-large-2) {
+    padding-bottom: rem(72px);
+  }
+  @include screen-lt($bp-large) {
+    padding-bottom: rem(40px);
   }
 }
 .projects__heading{
