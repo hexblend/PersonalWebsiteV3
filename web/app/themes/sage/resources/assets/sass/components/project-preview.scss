@@ -11,7 +11,7 @@
     border-radius: 0;
     border-top-right-radius: rem(20px);
     border-top-left-radius: rem(20px);
-    transform: scale(1.025);
+    transform: scale(1.025) !important;
     z-index: 15;
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.25);
   }

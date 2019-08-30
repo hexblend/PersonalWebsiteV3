@@ -10,7 +10,7 @@
         <div class="landing__video-gradient"></div>
         <!-- Central Elements -->
         <div class="landing__central-elements">
-            <div v-if="fields.logo" class="landing__central-elements--logo" :style="{ backgroundImage: `url('${fields.logo}')` }"></div>
+            <div v-if="fields.logo" class="landing__central-elements--logo" :style="{ backgroundImage: `url('${fields.logo}')` }" data-aos="zoom-out" data-aos-offset="650"></div>
             <h1 v-if="fields.name" class="landing__central-elements--title" :class="{'mb-8': !fields.slug}">{{ fields.name }}</h1>
             <h2 v-if="fields.slug" class="landing__central-elements--slug">
                 {{ fields.slug }}
