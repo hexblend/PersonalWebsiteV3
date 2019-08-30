@@ -1,10 +1,11 @@
-<nav role="navigation" aria-label="main navigation">
-    <div>
-        <a href="{{ home_url('/') }}">
-            {{ get_bloginfo('name', 'display') }}
-        </a>
-    </div>
+<navbar>
     @if (has_nav_menu('primary_navigation'))
-        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'sage-menu']) !!}
+        {!! wp_nav_menu([
+            'theme_location' => 'primary_navigation',
+            'menu'            => '',
+            'container'       => '',
+            'menu_class' => 'navbar__links',
+            'item_spacing'    => 'preserve'
+        ]) !!}
     @endif
-</nav>
+</navbar>

@@ -1,5 +1,5 @@
 <template>
-    <section class="landing" id="landing">
+    <section class="landing" id="home">
         <!-- Video -->
         <div class="landing__video-container">
             <video autoplay muted loop class="landing__video-container--video">
@@ -17,10 +17,10 @@
                 <vue-typer
                         :text='[fields.slug_ending_1, fields.slug_ending_2, fields.slug_ending_3]'
                         initial-action='erasing'
-                        :pre-erase-delay='2500'
-                        :erase-delay='100'
-                        :pre-type-delay='100'
-                        :type-delay='100'
+                        :pre-erase-delay='1800'
+                        :erase-delay='70'
+                        :pre-type-delay='70'
+                        :type-delay='70'
                         erase-style='backspace'
                 ></vue-typer>
             </h2>
