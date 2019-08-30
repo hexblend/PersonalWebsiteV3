@@ -7,6 +7,8 @@
                 v-for="(spackage, index) in packages"
                 :key="index"
                 :spackage="spackage"
+                data-aos="fade-up"
+                data-aos-delay="100"
             ></single-package>
         </div>
     </section>
