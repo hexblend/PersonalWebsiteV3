@@ -94,3 +94,10 @@ Container::getInstance()
 
 // Disable Gutenberg
 add_filter('use_block_editor_for_post', '__return_false', 10);
+
+// Add attributes to wordpress navbar
+function sage_custom_nav_attributes ( $atts, $item, $args ) {
+    $atts['data-scroll'] = 'true';
+    return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'sage_custom_nav_attributes', 10, 3 );
