@@ -7,7 +7,7 @@
     font-family: $f-primary;
     @include transition();
     @include mix-lg-desktop() {
-        background: rgba(255, 255, 255, 0.96);
+        background: $c-white;
         border-bottom: 1px solid $c-light-grey;
         padding: rem(8px 0);
         width: 100%;
@@ -25,13 +25,7 @@
         }
         @include mix-lg-desktop() {
             margin-bottom: 0;
-            margin-right: rem(24px);
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-        @include mix-sm-mobile() {
-            margin-right: rem(0px);
+            margin-right: rem(40px);
             &:last-child {
                 margin-right: 0;
             }
@@ -44,7 +38,7 @@
             @include transition();
             @include mix-lg-desktop() {
                 padding-bottom: 0;
-                padding-right: rem(24px);
+                padding-right: 0;
             }
         }
     }

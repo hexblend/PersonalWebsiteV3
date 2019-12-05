@@ -44,6 +44,7 @@
                 v-if="fields.button_text"
                 class="landing__central-elements--button btn btn-ghost"
                 href="#projects"
+                v-smooth-scroll
                 >{{ fields.button_text }}</a
             >
         </div>

@@ -7,7 +7,6 @@
                     v-smooth-scroll
                     @mouseover="link.active = true"
                     @mouseleave="link.active = false"
-                    :style="!link.active ? 'padding-left: 16px;' : ''"
                     :class="changeTextColor"
                     >{{ link.active ? link.label : link.placeholder }}</a
                 >
