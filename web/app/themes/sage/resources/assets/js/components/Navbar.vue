@@ -6,7 +6,7 @@
                     :href="link.link"
                     @mouseover="link.active = true"
                     @mouseleave="link.active = false"
-                    :style="!link.active ? 'padding-left: 24px;' : ''"
+                    :style="!link.active ? 'padding-left: 16px;' : ''"
                     :class="changeTextColor"
                     >{{ link.active ? link.label : link.placeholder }}</a
                 >
@@ -27,7 +27,7 @@ export default {
             links: [
                 {
                     link: "/#home",
-                    label: "Home Screen",
+                    label: "Home",
                     placeholder: "·",
                     active: false
                 },
@@ -45,7 +45,7 @@ export default {
                 },
                 {
                     link: "/#about",
-                    label: "About me",
+                    label: "About",
                     placeholder: "·",
                     active: false
                 },
