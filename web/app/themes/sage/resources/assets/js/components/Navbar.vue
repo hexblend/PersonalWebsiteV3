@@ -103,19 +103,19 @@ export default {
                 this.links[2].active = false;
                 this.links[3].active = false;
                 this.links[4].active = false;
-            } else if (this.scrolled > 50 && this.scrolled < 70) {
+            } else if (this.scrolled > 50 && this.scrolled < 65) {
                 this.links[0].active = false;
                 this.links[1].active = false;
                 this.links[2].active = true;
                 this.links[3].active = false;
                 this.links[4].active = false;
-            } else if (this.scrolled > 70 && this.scrolled < 90) {
+            } else if (this.scrolled > 65 && this.scrolled < 80) {
                 this.links[0].active = false;
                 this.links[1].active = false;
                 this.links[2].active = false;
                 this.links[3].active = true;
                 this.links[4].active = false;
-            } else if (this.scrolled > 90) {
+            } else if (this.scrolled > 80) {
                 this.links[0].active = false;
                 this.links[1].active = false;
                 this.links[2].active = false;

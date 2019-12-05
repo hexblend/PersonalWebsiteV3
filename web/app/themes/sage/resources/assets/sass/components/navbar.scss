@@ -7,7 +7,7 @@
     font-family: $f-primary;
     @include transition();
     @include mix-lg-desktop() {
-        background: rgba(255, 255, 255, 0.94);
+        background: rgba(255, 255, 255, 0.96);
         border-bottom: 1px solid $c-light-grey;
         padding: rem(8px 0);
         width: 100%;

@@ -6,7 +6,7 @@
     flex-direction: column;
     position: relative;
     @include mix-lg-desktop() {
-        margin-top: rem(40px);
+        padding-top: rem(40px);
     }
 }
 .landing__video-container {
