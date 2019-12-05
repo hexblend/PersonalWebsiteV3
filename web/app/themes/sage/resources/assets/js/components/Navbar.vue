@@ -4,6 +4,7 @@
             <li v-for="link in links">
                 <a
                     :href="link.link"
+                    v-smooth-scroll
                     @mouseover="link.active = true"
                     @mouseleave="link.active = false"
                     :style="!link.active ? 'padding-left: 16px;' : ''"
@@ -60,11 +61,11 @@ export default {
     },
     computed: {
         changeTextColor() {
-            if (this.scrolled >= 0 && this.scrolled < 13) {
+            if (this.scrolled >= 0 && this.scrolled < 15) {
                 return "changeWhite";
-            } else if (this.scrolled > 13 && this.scrolled < 63) {
+            } else if (this.scrolled > 15 && this.scrolled < 65) {
                 return "changeBlue";
-            } else if (this.scrolled > 63 && this.scrolled < 84) {
+            } else if (this.scrolled > 65 && this.scrolled < 80) {
                 return "changeWhite";
             } else {
                 return "changeBlue";

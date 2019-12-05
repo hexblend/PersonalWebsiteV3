@@ -33,6 +33,9 @@
     background: $c-darkest-gradient;
     opacity: 0.8;
     z-index: -9;
+    @include mix-lg-desktop() {
+        bottom: rem(-20px);
+    }
 }
 
 .landing__central-elements {
