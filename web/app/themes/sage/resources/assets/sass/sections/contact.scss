@@ -46,22 +46,23 @@
         flex-direction: column;
     }
     div {
-            &:first-child{
-                margin-right: rem(32px);
-                @include screen-lt($bp-medium) {
-                    margin-right: 0;
-                }
-            }
-            p{
-                margin-bottom: rem(16px);
-            }
-            input, select{
-                margin-top: rem(4px);
-            }
+        &:first-child {
+            margin-right: rem(32px);
             @include screen-lt($bp-medium) {
-                width: 100%;
+                margin-right: 0;
             }
         }
+        p {
+            margin-bottom: rem(16px);
+        }
+        input,
+        select {
+            margin-top: rem(4px);
+        }
+        @include screen-lt($bp-medium) {
+            width: 100%;
+        }
+    }
 }
 .contact__information--links {
     @include screen-lt($bp-extra-large) {
@@ -76,6 +77,9 @@
     @include screen-lt($bp-extra-large) {
         @include section-heading-center;
         margin-bottom: rem(24px);
+    }
+    @include screen-lt($bp-medium) {
+        text-align: center;
     }
 }
 .contact__information--links__row {

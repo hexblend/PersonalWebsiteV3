@@ -3,14 +3,23 @@
     height: rem(250px);
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
     padding: rem(0 40px);
-    text-align: center;
     @include mix-md-tablet {
-        padding: rem(0 10px);
+        padding: rem(0 8px);
+    }
+}
+.singleProject__banner--content {
+    text-align: left;
+    max-width: 1080px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    @include mix-md-tablet {
+        align-items: center;
+        text-align: center;
+        padding: rem(8px);
     }
 }
 .singleProject__banner--title {
@@ -26,7 +35,7 @@
     max-width: 1080px;
     padding: rem(30px 40px 0 40px);
     @include mix-md-tablet {
-        padding: rem(10px);
+        padding: rem(8px);
     }
     h1,
     h2,
@@ -67,5 +76,10 @@
             color: $c-light-blue;
             border-bottom: 1px solid $c-light-blue;
         }
+    }
+}
+.singleProject__contact {
+    @include mix-md-tablet {
+        padding: rem(0 8px);
     }
 }
