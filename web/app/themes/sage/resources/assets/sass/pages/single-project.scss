@@ -1,0 +1,85 @@
+.singleProject__banner {
+    width: 100%;
+    height: rem(250px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: rem(0 40px);
+    @include mix-md-tablet {
+        padding: rem(0 8px);
+    }
+}
+.singleProject__banner--content {
+    text-align: left;
+    max-width: 1080px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    @include mix-md-tablet {
+        align-items: center;
+        text-align: center;
+        padding: rem(8px);
+    }
+}
+.singleProject__banner--title {
+    font-weight: $fw-bold;
+    color: $c-white;
+    margin-bottom: 8px;
+}
+.singleProject__banner--smallDesc {
+    color: $c-white;
+    font-size: $txt-small;
+}
+.singleProject__content {
+    max-width: 1080px;
+    padding: rem(30px 40px 0 40px);
+    @include mix-md-tablet {
+        padding: rem(8px);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: $fw-bold;
+        @include section-heading;
+    }
+    ul,
+    p {
+        margin-top: rem(16px);
+        margin-bottom: rem(32px);
+        color: $c-darkest-grey;
+        font-size: $txt-regular;
+    }
+    ul {
+        position: relative;
+        padding-left: 1.2em;
+        font-family: $f-primary;
+    }
+    ul li:before {
+        content: "\00BB";
+        position: absolute;
+        left: 0;
+        color: $c-mid-grey;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    a {
+        color: $c-dark-blue;
+        border-bottom: 1px solid $c-blue;
+        line-height: 1.4;
+        &:hover {
+            color: $c-light-blue;
+            border-bottom: 1px solid $c-light-blue;
+        }
+    }
+}
+.singleProject__contact {
+    @include mix-md-tablet {
+        padding: rem(0 8px);
+    }
+}

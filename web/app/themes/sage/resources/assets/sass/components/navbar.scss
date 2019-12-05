@@ -1,56 +1,65 @@
 .navbar {
-  position: fixed;
-  top: rem(16px);
-  right: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: rem(16px 80px 13px 80px);
-  z-index: 9999;
-  font-family: $f-primary;
-  @include transition();
-}
-.navbar__brand {
-  color: $c-white;
-  position: relative;
-  &:before{
-    content: '';
-    background: url(../img/logo.svg) no-repeat;
-    width: rem(24px);
-    height: rem(24px);
-    position: absolute;
-    top: rem(-1px);
-    left: rem(-26px);
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: rem(32px);
+    z-index: 9999;
+    font-family: $f-primary;
     @include transition();
-  }
-  &:hover {
-    &:before {
-      transform: scale(1.25);
+    @include mix-lg-desktop() {
+        background: $c-white;
+        border-bottom: 1px solid $c-light-grey;
+        padding: rem(8px 0);
+        width: 100%;
+        transform: translateY(0);
+        top: 0;
+        left: 0;
     }
-  }
 }
 .navbar__links {
-  justify-self: center;
-  li {
-    display: inline-block;
-    margin-right: rem(24px);
-    &:last-child {
-      margin-right: 0;
+    li {
+        margin-bottom: rem(24px);
+        color: $c-white;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @include mix-lg-desktop() {
+            margin-bottom: 0;
+            margin-right: rem(40px);
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        a {
+            padding-bottom: rem(24px);
+            text-align: center;
+            border-bottom: 1px solid transparent;
+            font-weight: $fw-regular;
+            @include transition();
+            @include mix-lg-desktop() {
+                padding-bottom: 0;
+                padding-right: 0;
+            }
+        }
     }
-    a {
-      color: $c-white;
-      border-bottom: 1px solid transparent;
-      padding-bottom: 0;
-      font-weight: $fw-regular;
-      margin-top: 2px !important;
-      @include transition();
-      &:hover,
-      &:active,
-      &.active {
-        padding-bottom: rem(8px);
-        border-bottom-color: $c-white;
-      }
+    @include mix-lg-desktop() {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-  }
+}
+.navbar__persentege {
+    margin-top: rem(16px);
+    margin-left: rem(16px);
+}
+.changeBlue {
+    color: $c-darkest-blue !important;
+    font-weight: $fw-bold !important;
+}
+.changeWhite {
+    color: $c-white !important;
+    @include mix-lg-desktop() {
+        color: $c-blue !important;
+        font-weight: $fw-bold !important;
+    }
 }

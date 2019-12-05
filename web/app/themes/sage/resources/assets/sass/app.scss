@@ -82,14 +82,13 @@
 @import "elements/forms";
 @import "elements/buttons";
 
-// Objects
-
 // Components
 @import "components/project-preview";
 @import "components/single-package";
 @import "components/navbar";
 
 // Pages
+@import "pages/single-project";
 
 // Sections
 @import "sections/landing";
