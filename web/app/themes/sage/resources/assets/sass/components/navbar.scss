@@ -18,7 +18,7 @@
             padding-bottom: rem(24px);
             text-align: center;
             border-bottom: 1px solid transparent;
-            font-weight: $fw-bold;
+            font-weight: $fw-regular;
             @include transition();
         }
     }
@@ -29,6 +29,7 @@
 }
 .changeBlue {
     color: $c-darkest-blue !important;
+    font-weight: $fw-bold !important;
 }
 .changeWhite {
     color: $c-white !important;

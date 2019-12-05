@@ -4,8 +4,8 @@
             <li v-for="link in links">
                 <a
                     :href="link.link"
-                    @mouseover="link.active = !link.active"
-                    @mouseleave="link.active = !link.active"
+                    @mouseover="link.active = true"
+                    @mouseleave="link.active = false"
                     :style="!link.active ? 'padding-left: 24px;' : ''"
                     :class="changeTextColor"
                     >{{ link.active ? link.label : link.placeholder }}</a
@@ -27,7 +27,7 @@ export default {
             links: [
                 {
                     link: "/#home",
-                    label: "Home screen",
+                    label: "Home Screen",
                     placeholder: "·",
                     active: false
                 },
