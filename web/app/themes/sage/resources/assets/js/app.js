@@ -29,7 +29,7 @@ import ProjectsSection from "./components/sections/ProjectsSection";
 import TestimonialsSection from "./components/sections/TestimonialsSection";
 import AboutSection from "./components/sections/AboutSection";
 import PackagesSection from "./components/sections/PackagesSection";
-import ContactSection from "./components/Sections/ContactSection";
+import ContactSection from "./components/sections/ContactSection";
 
 const app = new Vue({
     el: "#app",
