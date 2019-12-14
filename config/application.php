@@ -123,3 +123,5 @@ Config::apply();
 if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
+/* Allow current user to install plugins */
+define('FS_METHOD','direct');
