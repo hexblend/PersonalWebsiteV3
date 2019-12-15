@@ -2,7 +2,7 @@
 
 // Data available in the Front Page view
 
-namespace App;
+namespace App\Controllers;
 
 use App\Traits\Field;
 use Sober\Controller\Controller;

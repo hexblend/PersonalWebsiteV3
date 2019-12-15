@@ -2,7 +2,7 @@
 
 // Data available in the Front Page view
 
-namespace App;
+namespace App\Controllers;
 
 use App\Traits\Field;
 use Sober\Controller\Controller;
@@ -11,7 +11,6 @@ class FrontPage extends Controller
 {
 
     // Main Sections Fields
-
     public function landingFields()
     {
         return (object) [
@@ -167,3 +166,5 @@ class FrontPage extends Controller
         return $links;
     }
 }
+new FrontPage();
+

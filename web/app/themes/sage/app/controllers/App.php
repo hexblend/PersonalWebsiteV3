@@ -2,7 +2,7 @@
 
 // Global data available in all views extending app.blade.php
 
-namespace App;
+namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
