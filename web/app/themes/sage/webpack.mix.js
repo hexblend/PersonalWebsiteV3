@@ -1,5 +1,5 @@
-let mix = require("laravel-mix")
-require("laravel-mix-purgecss")
+let mix = require("laravel-mix");
+require("laravel-mix-purgecss");
 
 /*
  |--------------------------------------------------------------------------
@@ -18,14 +18,26 @@ mix.setPublicPath("dist")
     .sass("resources/assets/sass/app.scss", "css/")
     .options({
         processCssUrls: false,
-        postCss: [require("tailwindcss")("./tailwind.js"), require('autoprefixer')()]
+        postCss: [
+            require("tailwindcss")("./tailwind.js"),
+            require("autoprefixer")()
+        ]
     })
-    .purgeCss()
+    .purgeCss({
+        whitelist: [
+            "textarea",
+            "select",
+            "contact__information--form__columns",
+            "custom",
+            "char",
+            "caret"
+        ]
+    })
     .copy("resources/assets/img", "dist/img/")
-    .copy("resources/assets/video", "dist/video/")
+    .copy("resources/assets/video", "dist/video/");
 
-mix.browserSync("http://localhost:8888")
+mix.browserSync("http://localhost:8888");
 
 if (mix.inProduction()) {
-    mix.version()
+    mix.version();
 }
