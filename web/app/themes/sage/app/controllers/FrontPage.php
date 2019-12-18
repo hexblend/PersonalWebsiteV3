@@ -68,7 +68,7 @@ class FrontPage extends Controller
     {
         $args = [
             'posts_per_page' => -1,
-            'orderby' => 'menu_order',
+            'orderby' => 'date',
             'oder' => 'DESC',
             'post_type' => 'projects'
         ];
