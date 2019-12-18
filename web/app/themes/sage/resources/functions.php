@@ -101,3 +101,7 @@ function sage_custom_nav_attributes ( $atts, $item, $args ) {
     return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'sage_custom_nav_attributes', 10, 3 );
+// Increase upload size
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
