@@ -5,9 +5,6 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
-    @include mix-lg-desktop() {
-        padding-top: rem(40px);
-    }
 }
 .landing__video-container {
     position: absolute;
@@ -33,19 +30,14 @@
     background: $c-darkest-gradient;
     opacity: 0.8;
     z-index: -9;
-    @include mix-lg-desktop() {
-        bottom: rem(-20px);
-    }
 }
 
 .landing__central-elements {
     text-align: center;
     min-width: 100%;
-    padding-bottom: rem(
-        calc(8px + 24px)
-    ); // Button compensation + footer text margin
-    @include screen-lt($bp-extra-small) {
-        padding-bottom: rem(8px);
+    padding-bottom: rem(calc(8px + 24px));
+    @include screen-lt($bp-small) {
+        padding-bottom: rem(80px);
     }
 }
 
