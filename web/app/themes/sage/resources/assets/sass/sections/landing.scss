@@ -5,9 +5,6 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
-    @include mix-lg-desktop() {
-        padding-top: rem(40px);
-    }
 }
 .landing__video-container {
     position: absolute;
@@ -33,9 +30,6 @@
     background: $c-darkest-gradient;
     opacity: 0.8;
     z-index: -9;
-    @include mix-lg-desktop() {
-        bottom: rem(-20px);
-    }
 }
 
 .landing__central-elements {
