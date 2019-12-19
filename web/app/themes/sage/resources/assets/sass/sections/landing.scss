@@ -37,7 +37,7 @@
     min-width: 100%;
     padding-bottom: rem(calc(8px + 24px));
     @include screen-lt($bp-small) {
-        padding-bottom: rem(40px);
+        padding-bottom: rem(80px);
     }
 }
 
