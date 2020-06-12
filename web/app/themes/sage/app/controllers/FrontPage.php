@@ -69,7 +69,7 @@ class FrontPage extends Controller
         $args = [
             'posts_per_page' => -1,
             'orderby' => 'date',
-            'oder' => 'DESC',
+            'order' => 'DESC',
             'post_type' => 'projects'
         ];
         $the_query = new \WP_Query($args);
@@ -80,10 +80,14 @@ class FrontPage extends Controller
                 $description = get_field('project_small_description', $project);
                 $permalink = get_post_permalink($project);
                 $preview_image = get_field('project_preview_image', $project);
+                $project_banner = get_field('project_banner_image', $project);
+                $project_logo = get_field('project_logo', $project);
                 return (object) [
                     'name' => $name,
                     'description' => $description,
                     'preview_image' => $preview_image,
+                    'banner' => $project_banner,
+                    'logo' => $project_logo,
                     'permalink' => $permalink
                 ];
             }, $the_query->posts);

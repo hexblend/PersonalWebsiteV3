@@ -1,23 +1,20 @@
 <template>
-    <a :href="project.permalink" style="cursor: default">
-        <div
-            class="project-preview"
-            :style="[this.project.preview_image ? dynamicBG : '']"
-        >
-            <div class="project-preview__info">
-                <h5 class="project-preview__info--name">{{ project.name }}</h5>
-                <p class="project-preview__info--description">
-                    {{ project.description }}
-                </p>
-                <a
-                    :href="project.permalink"
-                    class="project-preview__info--permalink"
-                >
-                    See project
-                </a>
-            </div>
+    <div
+        class="project-preview"
+        :style="[this.project.preview_image ? dynamicBG : '']"
+    >
+        <div class="project-preview__info">
+            <h5 class="project-preview__info--name">{{ project.name }}</h5>
+            <p class="project-preview__info--description">
+                {{ project.description }}
+            </p>
+            <a
+                :href="project.permalink"
+                class="project-preview__info--permalink"
+                >See project</a
+            >
         </div>
-    </a>
+    </div>
 </template>
 
 <script>
