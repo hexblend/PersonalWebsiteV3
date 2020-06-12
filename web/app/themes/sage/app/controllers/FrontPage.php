@@ -69,7 +69,7 @@ class FrontPage extends Controller
         $args = [
             'posts_per_page' => -1,
             'orderby' => 'date',
-            'oder' => 'DESC',
+            'order' => 'DESC',
             'post_type' => 'projects'
         ];
         $the_query = new \WP_Query($args);
