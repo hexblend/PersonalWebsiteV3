@@ -2,15 +2,12 @@
     <section class="projects" id="projects">
         <h3 class="projects__heading">{{ fields.title }}</h3>
         <div class="projects__previews-wrapper">
-            <!-- {{ projects }} -->
-            <div>Big projects</div>
-            <project-preview
+            <big-project-preview
                 v-for="(project, index) in bigProjects"
                 :key="index"
                 :project="project"
                 data-aos="zoom-in"
-            ></project-preview>
-            <div>Small projects</div>
+            ></big-project-preview>
             <project-preview
                 v-for="(project, index) in smallProjects"
                 :key="index"
@@ -23,9 +20,10 @@
 
 <script>
 import ProjectPreview from "../ProjectPreview";
+import BigProjectPreview from "../BigProjectPreview";
 export default {
     name: "projects-section",
-    components: { ProjectPreview },
+    components: { ProjectPreview, BigProjectPreview },
     data() {
         return {
             fields: JSON.parse(this.work_fields),
