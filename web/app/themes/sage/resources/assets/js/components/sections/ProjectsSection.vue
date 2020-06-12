@@ -1,16 +1,16 @@
 <template>
     <section class="projects" id="projects">
-        <h3 class="projects__heading">{{ fields.title }}</h3>
+        <h3 class="projects__heading" data-aos="zoom-in">{{ fields.title }}</h3>
         <div class="projects__previews-wrapper">
             <big-project-preview
-                v-for="(project, index) in bigProjects"
-                :key="index"
+                v-for="project in bigProjects"
+                :key="project.name"
                 :project="project"
                 data-aos="zoom-in"
             ></big-project-preview>
             <project-preview
-                v-for="(project, index) in smallProjects"
-                :key="index"
+                v-for="project in smallProjects"
+                :key="project.name"
                 :project="project"
                 data-aos="zoom-in"
             ></project-preview>
