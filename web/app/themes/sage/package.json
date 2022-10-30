@@ -9,7 +9,7 @@
     },
     "devDependencies": {
         "babel-polyfill": "^6.26.0",
-        "browser-sync": "^2.26.7",
+        "browser-sync": "^2.27.10",
         "browser-sync-webpack-plugin": "2.0.1",
         "sass-loader": "7.*",
         "sass-rem": "^2.0.1",
